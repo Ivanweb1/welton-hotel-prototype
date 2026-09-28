@@ -1,0 +1,319 @@
+/* ============ WELTON HOTEL — Ч/Б ПРОТОТИП ============ */
+:root{
+  --ink:#141414;
+  --ink-2:#6a6a6a;
+  --ink-3:#9c9c9c;
+  --line:#dcdcdc;
+  --line-2:#ececec;
+  --paper:#ffffff;
+  --bg:#f5f5f4;
+  --soft:#efefee;
+  --fill:#e4e4e2;
+  --w:1320px;
+  --pad:40px;
+  --r:4px;
+  --r-lg:6px;
+  --ease:cubic-bezier(.22,.68,.3,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Manrope","Inter","Segoe UI",system-ui,sans-serif;
+  background:var(--paper);color:var(--ink);
+  font-size:16px;line-height:1.6;font-weight:450;
+  -webkit-font-smoothing:antialiased;
+  filter:grayscale(1);
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+
+/* ============ СЕТКА ============ */
+.wrap{max-width:var(--w);margin:0 auto;padding:0 var(--pad)}
+.sec{position:relative;padding:96px 0;border-top:1px solid var(--line-2)}
+.sec--alt{background:var(--bg)}
+.sec--tight{padding:64px 0}
+
+/* ============ МАРКЕР СЕКЦИИ (для обсуждения) ============ */
+.tag{
+  position:absolute;left:0;top:0;
+  font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-3);background:var(--paper);
+  border:1px solid var(--line);border-left:0;
+  padding:5px 12px 5px 10px;border-radius:0 3px 3px 0;
+  font-weight:700;
+}
+body.no-tags .tag{display:none}
+
+/* ============ ЗАГЛУШКИ ============ */
+.ph{
+  background:var(--fill);position:relative;overflow:hidden;
+  border-radius:var(--r);border:1px solid var(--line);
+}
+.ph::after{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(to top right,transparent 49.7%,rgba(0,0,0,.09) 49.7%,rgba(0,0,0,.09) 50.3%,transparent 50.3%),
+    linear-gradient(to top left,transparent 49.7%,rgba(0,0,0,.09) 49.7%,rgba(0,0,0,.09) 50.3%,transparent 50.3%);
+}
+.ph > span{
+  position:absolute;z-index:1;left:50%;top:50%;transform:translate(-50%,-50%);
+  background:rgba(255,255,255,.94);padding:6px 14px;font-size:11px;color:var(--ink-2);
+  border-radius:100px;letter-spacing:.03em;font-weight:650;text-align:center;
+  max-width:calc(100% - 24px);line-height:1.35;
+}
+.line{height:8px;background:var(--fill);border-radius:100px;margin-top:9px}
+.line.s{width:48%}
+.line.m{width:76%}
+.line.l{width:92%}
+.lines{margin-top:14px}
+.icon{width:40px;height:40px;border-radius:50%;background:var(--soft);border:1px solid var(--line);flex:0 0 auto}
+.icon.sq{border-radius:var(--r)}
+.icon.sm{width:28px;height:28px}
+
+/* ============ ТИПОГРАФИКА ============ */
+.eyebrow{
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:700;margin-bottom:14px;
+}
+h1{font-size:58px;line-height:1.08;font-weight:600;letter-spacing:-.02em}
+h2{font-size:38px;line-height:1.14;font-weight:600;letter-spacing:-.02em}
+h3{font-size:21px;line-height:1.25;font-weight:600;letter-spacing:-.01em}
+h4{font-size:16px;line-height:1.3;font-weight:650}
+.lead{font-size:18px;color:var(--ink-2);max-width:62ch}
+.muted{color:var(--ink-2)}
+.small{font-size:13px;color:var(--ink-2)}
+.xs{font-size:11px;color:var(--ink-3);letter-spacing:.04em}
+
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:44px}
+.sec-head .lead{margin-top:14px}
+
+/* ============ КНОПКИ ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  height:52px;padding:0 28px;border-radius:var(--r);
+  border:1px solid var(--ink);background:var(--ink);color:var(--paper);
+  font-size:14px;font-weight:650;letter-spacing:.02em;cursor:pointer;
+  transition:.25s var(--ease);white-space:nowrap;
+}
+.btn:hover{opacity:.82}
+.btn--ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn--ghost:hover{border-color:var(--ink);opacity:1}
+.btn--sm{height:42px;padding:0 20px;font-size:13px}
+.btn--wide{width:100%}
+.link{
+  display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:650;
+  border-bottom:1px solid var(--line);padding-bottom:3px;transition:.2s var(--ease);
+}
+.link:hover{border-color:var(--ink)}
+
+/* ============ ХЕДЕР ============ */
+.hdr{
+  position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line-2);
+}
+.hdr__top{display:flex;align-items:center;justify-content:space-between;height:44px;border-bottom:1px solid var(--line-2)}
+.hdr__top .xs{display:flex;gap:18px;align-items:center}
+.hdr__bar{display:flex;align-items:center;justify-content:space-between;gap:28px;height:76px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo__mark{width:42px;height:42px;border:1px solid var(--line);border-radius:var(--r);background:var(--soft)}
+.logo__txt{font-size:15px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;line-height:1.1}
+.logo__sub{font-size:9px;letter-spacing:.2em;color:var(--ink-3);text-transform:uppercase}
+.nav{display:flex;gap:17px;font-size:13px;font-weight:550;white-space:nowrap}
+.nav a{padding:6px 0;border-bottom:1px solid transparent;transition:.2s}
+.nav a:hover{border-color:var(--ink)}
+.hdr__act{display:flex;align-items:center;gap:14px;white-space:nowrap}
+.hdr__phone{font-size:14px;font-weight:650;white-space:nowrap}
+.lang{display:flex;gap:6px;font-size:12px;font-weight:700;letter-spacing:.06em}
+.lang b{border-bottom:1px solid var(--ink)}
+.lang span{color:var(--ink-3)}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:var(--r);background:var(--paper);cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.burger i{display:block;width:18px;height:1.5px;background:var(--ink)}
+
+/* ============ 01 ПЕРВЫЙ ЭКРАН ============ */
+.hero{position:relative;padding-top:0;border-top:0}
+.hero__media{
+  position:relative;height:calc(100vh - 120px);min-height:560px;max-height:760px;
+  background:var(--fill);overflow:hidden;
+}
+.hero__media::after{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(to top right,transparent 49.85%,rgba(0,0,0,.07) 49.85%,rgba(0,0,0,.07) 50.15%,transparent 50.15%),
+    linear-gradient(to top left,transparent 49.85%,rgba(0,0,0,.07) 49.85%,rgba(0,0,0,.07) 50.15%,transparent 50.15%);
+}
+.hero__label{
+  position:absolute;z-index:2;left:50%;top:22px;transform:translateX(-50%);
+  background:rgba(255,255,255,.94);padding:7px 16px;border-radius:100px;
+  font-size:11px;font-weight:650;color:var(--ink-2);text-align:center;
+}
+.hero__inner{position:absolute;z-index:3;inset:0;display:flex;align-items:center}
+.hero__box{max-width:660px;background:rgba(255,255,255,.9);border:1px solid var(--line);padding:44px;border-radius:var(--r-lg)}
+.stars{display:flex;gap:5px;margin-bottom:18px}
+.stars i{width:11px;height:11px;background:var(--ink-3);display:block;
+  clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+.hero__meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chip{
+  display:inline-flex;align-items:center;gap:7px;height:32px;padding:0 13px;
+  border:1px solid var(--line);border-radius:100px;font-size:12px;font-weight:600;color:var(--ink-2);
+  background:var(--paper);
+}
+.hero__btns{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.hero__nav{position:absolute;z-index:3;right:var(--pad);bottom:78px;display:flex;gap:8px}
+.arrow{width:46px;height:46px;border:1px solid var(--line);background:rgba(255,255,255,.9);border-radius:var(--r);
+  display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--ink-2);cursor:pointer}
+.arrow:hover{border-color:var(--ink);color:var(--ink)}
+
+/* ============ ФОРМА БРОНИ ============ */
+.booking{position:relative;z-index:5;margin-top:-46px}
+.booking__box{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:22px;box-shadow:0 18px 50px rgba(0,0,0,.06);
+}
+.booking__grid{display:grid;grid-template-columns:1.1fr 1.1fr 1fr .9fr auto;gap:12px;align-items:end}
+.fld{display:flex;flex-direction:column;gap:7px}
+.fld label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+.fld .ctl{
+  height:52px;border:1px solid var(--line);border-radius:var(--r);background:var(--paper);
+  display:flex;align-items:center;padding:0 15px;font-size:14px;color:var(--ink-2);justify-content:space-between;
+}
+.booking__note{display:flex;justify-content:space-between;gap:20px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line-2);flex-wrap:wrap}
+
+/* ============ ПОЛОСА ПРЕИМУЩЕСТВ ============ */
+.usp{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-2);border:1px solid var(--line-2)}
+.usp > div{background:var(--paper);padding:28px 26px;display:flex;gap:14px;align-items:flex-start}
+.sec--alt .usp > div{background:var(--bg)}
+
+/* ============ КАРТОЧКИ ============ */
+.grid{display:grid;gap:24px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);
+  overflow:hidden;display:flex;flex-direction:column;transition:.25s var(--ease);
+}
+.card:hover{border-color:var(--ink-3)}
+.card__img{height:210px;border:0;border-bottom:1px solid var(--line);border-radius:0}
+.card__body{padding:22px;display:flex;flex-direction:column;gap:12px;flex:1}
+.card__foot{margin-top:auto;padding-top:16px;border-top:1px solid var(--line-2);display:flex;align-items:center;justify-content:space-between;gap:12px}
+.price{display:flex;align-items:baseline;gap:5px;white-space:nowrap}
+.price b{font-size:20px;font-weight:650;letter-spacing:-.01em}
+.card__foot .link{white-space:nowrap}
+.specs{display:flex;flex-wrap:wrap;gap:8px}
+.spec{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-2);
+  border:1px solid var(--line-2);background:var(--soft);border-radius:100px;padding:5px 11px}
+.amen{display:flex;gap:8px;margin-top:2px}
+
+/* ============ ФИЛЬТР-ТЕГИ ============ */
+.tags{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:32px}
+.tagbtn{height:38px;padding:0 17px;border:1px solid var(--line);border-radius:100px;background:var(--paper);
+  font-size:13px;font-weight:600;color:var(--ink-2);display:inline-flex;align-items:center;cursor:pointer}
+.tagbtn.is-on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* ============ SPLIT-БЛОК ============ */
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.split--rev .split__media{order:2}
+.split__media{height:480px}
+.split__list{display:flex;flex-direction:column;gap:0;margin:26px 0 30px;border-top:1px solid var(--line-2)}
+.split__list > div{display:flex;gap:14px;align-items:center;padding:15px 0;border-bottom:1px solid var(--line-2)}
+.split__btns{display:flex;gap:12px;flex-wrap:wrap}
+
+/* ============ МЕРОПРИЯТИЯ ============ */
+.evt__img{height:250px}
+.mice{
+  margin-top:24px;border:1px solid var(--line);border-radius:var(--r-lg);padding:22px 26px;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;background:var(--paper);
+}
+.mice__left{display:flex;align-items:center;gap:16px}
+
+/* ============ ЛЕНТА СОЦСЕТЕЙ ============ */
+.reel{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.reel__item{aspect-ratio:9/16}
+.socials{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}
+
+/* ============ ОТЗЫВЫ ============ */
+.rev{display:grid;grid-template-columns:320px 1fr;gap:24px;align-items:stretch}
+.rev__score{border:1px solid var(--line);border-radius:var(--r-lg);padding:30px;background:var(--paper);display:flex;flex-direction:column;justify-content:center;gap:10px}
+.rev__num{font-size:62px;font-weight:600;line-height:1;letter-spacing:-.03em}
+.rev__widget{height:330px}
+
+/* ============ КАРТА ============ */
+.map{position:relative}
+.map__ph{height:460px}
+.map__card{
+  position:absolute;left:var(--pad);top:50%;transform:translateY(-50%);
+  width:380px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);padding:30px;
+}
+.map__row{display:flex;gap:13px;padding:14px 0;border-bottom:1px solid var(--line-2)}
+.map__row:last-of-type{border-bottom:0}
+
+/* ============ ФОРМА ЗАЯВКИ ============ */
+.form{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+.form__grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form__grid .fld--full{grid-column:1/-1}
+.ctl--area{height:120px;align-items:flex-start;padding-top:15px}
+.check{display:flex;gap:11px;align-items:flex-start;margin-top:4px}
+.check i{width:18px;height:18px;border:1px solid var(--line);border-radius:3px;flex:0 0 auto;margin-top:2px;display:block}
+
+/* ============ ФУТЕР ============ */
+.ftr{background:var(--ink);color:#e8e8e8;padding:72px 0 30px}
+.ftr a:hover{opacity:.7}
+.ftr__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1.1fr;gap:36px;padding-bottom:44px;border-bottom:1px solid #2e2e2e}
+.ftr h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8d8d8d;margin-bottom:18px;font-weight:700}
+.ftr ul{list-style:none;display:flex;flex-direction:column;gap:11px;font-size:14px}
+.ftr .logo__mark{background:#2b2b2b;border-color:#3a3a3a}
+.ftr .logo__sub{color:#8d8d8d}
+.ftr__bot{display:flex;justify-content:space-between;gap:24px;padding-top:24px;font-size:12px;color:#8d8d8d;flex-wrap:wrap}
+.ftr .icon{background:#2b2b2b;border-color:#3a3a3a}
+
+/* ============ ПАНЕЛЬ ПРОТОТИПА ============ */
+.proto{
+  position:fixed;right:18px;bottom:18px;z-index:99;display:flex;gap:8px;
+  background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:100px;padding:7px 9px;
+  box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+.proto button{
+  border:1px solid var(--line);background:var(--paper);border-radius:100px;height:34px;padding:0 14px;
+  font-size:12px;font-weight:650;color:var(--ink-2);cursor:pointer;
+}
+.proto button:hover{border-color:var(--ink);color:var(--ink)}
+
+/* ============ АДАПТИВ ============ */
+@media(max-width:1180px){
+  .nav{display:none}
+  .burger{display:flex}
+  .booking__grid{grid-template-columns:1fr 1fr;gap:14px}
+  .booking__grid .fld--btn{grid-column:1/-1}
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .reel{grid-template-columns:repeat(3,1fr)}
+  .usp{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:900px){
+  :root{--pad:20px}
+  .hdr__top{display:none}
+  .hdr__phone,.lang{display:none}
+  .hdr__bar{height:64px;gap:12px}
+  .usp{grid-template-columns:1fr}
+  .hero__label{max-width:calc(100% - 32px);font-size:10px}
+  h1{font-size:38px}
+  h2{font-size:28px}
+  .sec{padding:64px 0}
+  .split,.form,.rev{grid-template-columns:1fr;gap:28px}
+  .split--rev .split__media{order:0}
+  .split__media{height:300px}
+  .g2,.g3,.g4{grid-template-columns:1fr}
+  .reel{grid-template-columns:repeat(2,1fr)}
+  .hero__box{padding:24px;max-width:none;background:rgba(255,255,255,.94)}
+  .hero__media{height:auto;min-height:0;max-height:none}
+  .hero__inner{position:relative;inset:auto;padding:130px 0 40px}
+  .hero__nav{display:none}
+  .logo__sub{display:none}
+  .logo__mark{width:36px;height:36px}
+  .booking{margin-top:20px}
+  .map__card{position:static;transform:none;width:auto;margin-top:-60px}
+  .map__ph{height:280px}
+  .ftr__grid{grid-template-columns:1fr 1fr}
+  .sec-head{flex-direction:column;align-items:flex-start;gap:16px}
+  .form__grid{grid-template-columns:1fr}
+}
