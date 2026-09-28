@@ -57,7 +57,6 @@
 
 <!-- ============ 01 НЕО-БАННЕР ============ -->
 <section class="sec hero" style="padding-bottom:0">
-  <span class="tag">01 · Нео-баннер — первый экран</span>
   <div class="hero__media">
     <div class="hero__label">Фон: видео / слайдер 4–5 кадров — фасад, лобби, номер, терраса, бассейн</div>
     <div class="hero__nav">
@@ -94,9 +93,8 @@
 <!-- ============ 01.1 ФОРМА БРОНИ ============ -->
 <section class="booking" id="booking" style="border:0">
   <div class="wrap">
-    <div class="booking__box" style="position:relative">
-      <span class="tag" style="top:-1px">01.1 · Форма брони</span>
-      <div class="booking__grid" style="margin-top:18px">
+    <div class="booking__box">
+      <div class="booking__grid">
         <div class="fld">
           <label>Заезд</label>
           <div class="ctl"><span>Дата</span><span>▾</span></div>
@@ -128,7 +126,6 @@
 
 <!-- ============ 01.2 ПОЛОСА ПРЕИМУЩЕСТВ ============ -->
 <section class="sec sec--tight" style="border-top:0">
-  <span class="tag">01.2 · Полоса преимуществ (моё дополнение)</span>
   <div class="wrap">
     <div class="usp">
       <div><span class="icon sq"></span><div><h4>Исторический центр</h4><div class="line s"></div></div></div>
@@ -141,7 +138,6 @@
 
 <!-- ============ 02 АНОНС НОМЕРОВ ============ -->
 <section class="sec sec--alt" id="rooms">
-  <span class="tag">02 · Анонс номеров</span>
   <div class="wrap">
     <div class="sec-head">
       <div>
@@ -245,7 +241,6 @@
 
 <!-- ============ 03 СПЕЦПРЕДЛОЖЕНИЯ ============ -->
 <section class="sec" id="offers">
-  <span class="tag">03 · Спецпредложения — анонс</span>
   <div class="wrap">
     <div class="sec-head">
       <div>
@@ -307,7 +302,6 @@
 
 <!-- ============ 04 АКВАЦЕНТР И ФИТНЕС ============ -->
 <section class="sec sec--alt" id="spa">
-  <span class="tag">04 · Анонс аквацентра и фитнеса</span>
   <div class="wrap">
     <div class="split">
       <div class="ph split__media"><span>Фото: бассейн / зона аквацентра</span></div>
@@ -332,7 +326,6 @@
 
 <!-- ============ 05 РЕСТОРАН ============ -->
 <section class="sec" id="rest">
-  <span class="tag">05 · Анонс ресторана</span>
   <div class="wrap">
     <div class="split split--rev">
       <div class="ph split__media"><span>Фото: зал ресторана / подача блюда</span></div>
@@ -357,7 +350,6 @@
 
 <!-- ============ 06 МЕРОПРИЯТИЯ ============ -->
 <section class="sec sec--alt" id="events">
-  <span class="tag">06 · Анонс мероприятий — 3 формата</span>
   <div class="wrap">
     <div class="sec-head">
       <div>
@@ -437,7 +429,6 @@
 
 <!-- ============ 07 ВИДЕОРЯД ИЗ СОЦСЕТЕЙ ============ -->
 <section class="sec" id="life">
-  <span class="tag">07 · Видеоряд из соцсетей — лента</span>
   <div class="wrap">
     <div class="sec-head">
       <div>
@@ -468,7 +459,6 @@
 
 <!-- ============ 08 ОТЗЫВЫ ============ -->
 <section class="sec sec--alt">
-  <span class="tag">08 · Отзывы — виджет Яндекса</span>
   <div class="wrap">
     <div class="sec-head">
       <div>
@@ -493,7 +483,6 @@
 
 <!-- ============ 09 КАРТА ============ -->
 <section class="sec map" style="padding:0" id="contacts">
-  <span class="tag" style="z-index:4">09 · Карта</span>
   <div class="ph map__ph" style="border-radius:0;border-left:0;border-right:0"><span>Карта — Яндекс.Карты, метка отеля</span></div>
   <div class="wrap" style="position:absolute;inset:0;pointer-events:none">
     <div class="map__card" style="pointer-events:auto">
@@ -509,7 +498,6 @@
 
 <!-- ============ 10 ФОРМА ЗАЯВКИ ============ -->
 <section class="sec">
-  <span class="tag">10 · Форма заявки</span>
   <div class="wrap">
     <div class="form">
       <div>
@@ -605,17 +593,5 @@
   </div>
 </footer>
 
-<!-- ============ ПАНЕЛЬ ПРОТОТИПА ============ -->
-<div class="proto">
-  <button id="toggleTags">Скрыть маркеры</button>
-</div>
-
-<script>
-  var btn = document.getElementById('toggleTags');
-  btn.addEventListener('click', function(){
-    document.body.classList.toggle('no-tags');
-    btn.textContent = document.body.classList.contains('no-tags') ? 'Показать маркеры' : 'Скрыть маркеры';
-  });
-</script>
 </body>
 </html>
