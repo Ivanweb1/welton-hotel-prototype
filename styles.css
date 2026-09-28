@@ -464,3 +464,24 @@ h4{font-size:16px;line-height:1.3;font-weight:650}
   .cap__row{grid-template-columns:1fr 1fr;gap:10px;padding:18px 20px}
   .cap__name{grid-column:1/-1}
 }
+
+/* ============ MICE-МЕНЕДЖЕР ============ */
+.person{display:grid;grid-template-columns:220px 1fr;gap:32px;border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:30px;background:var(--paper);align-items:center}
+.person__photo{height:220px}
+.person__contacts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px;padding-top:20px;border-top:1px solid var(--line-2)}
+.person__contacts > div{display:flex;flex-direction:column;gap:3px}
+@media(max-width:900px){
+  .person{grid-template-columns:1fr;gap:20px;padding:22px}
+  .person__photo{height:200px}
+  .person__contacts{grid-template-columns:1fr;gap:14px}
+}
+
+/* ============ ГОТОВЫЕ РЕШЕНИЯ ============ */
+.solutions{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.solution{border:1px solid var(--line);border-radius:var(--r-lg);padding:26px;background:var(--paper);display:flex;flex-direction:column;gap:12px}
+.solution__list{display:flex;flex-direction:column;border-top:1px solid var(--line-2);margin-top:2px}
+.solution__list > div{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--line-2);font-size:13px;color:var(--ink-2)}
+.solution__foot{margin-top:auto;padding-top:16px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+@media(max-width:1180px){.solutions{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){.solutions{grid-template-columns:1fr}}
