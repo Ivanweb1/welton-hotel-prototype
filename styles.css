@@ -593,3 +593,35 @@ h1,h2,h3{overflow-wrap:anywhere}
 @media(min-width:1181px){
   .nav__extra{display:none}
 }
+
+/* ============ ПРАВКИ ПО ТЕКСТАМ (окт. 2026) ============ */
+/* быстрые ссылки на первом экране главной */
+.hero__links{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:18px}
+.hero__links a{border:1px solid var(--line);border-radius:var(--r);background:var(--paper);padding:10px 12px;display:flex;flex-direction:column;gap:2px;transition:.2s}
+.hero__links a:hover{border-color:var(--ink)}
+.hero__links b{font-size:13px;font-weight:650;line-height:1.3}
+.hero__links span{font-size:11px;color:var(--ink-3);line-height:1.35}
+/* финальная строка страницы */
+.final{text-align:center;font-size:26px;font-weight:600;letter-spacing:-.01em;padding:56px 0}
+/* подпись под заголовком (ресторан) */
+.subtitle{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:650;margin-top:10px}
+@media(max-width:900px){
+  .hero__links{grid-template-columns:1fr 1fr}
+  .final{font-size:21px;padding:40px 0}
+}
+/* подпись логотипа в одну строку; меню из 8 пунктов на средних экранах */
+.logo__sub{white-space:nowrap}
+@media(min-width:1181px) and (max-width:1400px){
+  .nav{gap:12px;font-size:12.5px}
+  .lang{display:none}
+}
+/* длинные пункты удобств и оборудования не распирают сетку на мобильных */
+.amen-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.amen-grid > div{min-width:0;overflow-wrap:anywhere}
+@media(max-width:1180px){.amen-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:420px){.hdr__act .btn--sm{padding-left:12px;padding-right:12px;font-size:12px}}
+/* длинные подписи кнопок переносятся, а не вылезают за экран */
+@media(max-width:900px){
+  .mice .btn,.cta .btn,.split__btns .btn{white-space:normal;height:auto;min-height:42px;padding-top:10px;padding-bottom:10px;text-align:center;line-height:1.3}
+}
+@media(max-width:380px){.hdr__act .btn--sm{padding-left:9px;padding-right:9px;font-size:11.5px}.hdr__act{gap:8px}}
