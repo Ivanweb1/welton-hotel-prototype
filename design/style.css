@@ -176,7 +176,7 @@ body.menu-open { overflow: hidden; }
   display: flex; align-items: center;
   padding: 56px 0 96px;
 }
-.hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(1.12) saturate(1.05); }
+.hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .hero__stage::after {
   content: ''; position: absolute; inset: 0;
   background: linear-gradient(90deg, rgba(27, 28, 27, .28), rgba(27, 28, 27, 0) 60%);
@@ -560,6 +560,14 @@ body.menu-open { overflow: hidden; }
 .aspects i::after { content: ''; position: absolute; inset: 0 auto 0 0; width: var(--v); border-radius: 3px; background: var(--teal); }
 .aspects b { text-align: right; font-weight: 700; color: var(--teal-dark); }
 .reviews__src { font-size: 12px; color: var(--muted); }
+.revs { display: grid; gap: 16px; }
+.rev { display: grid; gap: 14px; justify-items: start; padding: 28px 32px; border-radius: 28px; background: var(--porcelain-pale); }
+.rev__head { display: grid; grid-template-columns: 48px 1fr auto; gap: 14px; align-items: center; width: 100%; }
+.rev__ava { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: var(--teal); color: var(--porcelain-pale); font-weight: 700; font-size: 18px; }
+.rev__head b { display: block; font-weight: 700; }
+.rev__head span { font-size: 13px; color: var(--muted); }
+.rev__head .rev__stars { color: var(--apricot); font-size: 16px; letter-spacing: 2px; }
+.rev p { font-size: 15px; line-height: 1.6; }
 .reviews__widget { position: relative; overflow: hidden; min-height: 560px; border-style: solid; border-color: rgba(39, 96, 101, .15); background: var(--porcelain-pale); }
 .reviews__widget iframe, .contacts__map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .contacts__map { overflow: hidden; }
@@ -623,6 +631,9 @@ body.menu-open { overflow: hidden; }
   .reviews__num { font-size: 88px; }
   .reviews__widget { min-height: 520px; }
   .aspects li { grid-template-columns: 100px 1fr 36px; }
+  .rev { padding: 24px 20px; }
+  .rev__head { grid-template-columns: 48px 1fr; }
+  .rev__head .rev__stars { grid-column: 2; }
   .events, .offers__grid { grid-template-columns: 1fr; }
   .hero__links { grid-template-columns: 1fr; }
   .reel { flex-basis: 64vw; }
