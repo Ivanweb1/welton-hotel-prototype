@@ -1472,3 +1472,9 @@ html, body { overflow-x: clip; }
 .pane__art svg { width: 26px; height: 26px; }
 .pane__text span { white-space: normal !important; overflow: visible; text-overflow: clip; line-height: 1.4; }
 .pane { padding: 16px 18px; }
+
+/* характеристики номеров — иконка + короткое значение */
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.specs--ico { flex-wrap: nowrap; gap: 6px; }
+.specs--ico li { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px 5px 8px; font-size: 12.5px; white-space: nowrap; color: var(--teal-dark); }
+.specs--ico li svg { flex-shrink: 0; color: var(--apricot); }
