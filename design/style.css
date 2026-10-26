@@ -886,3 +886,32 @@ body.menu-open { overflow: hidden; }
 :root { --shape-md: 26px 8px 26px 8px; }
 .hero__links a, .book, .manager, .list li:has(.ico), .facts__list li { border-radius: var(--shape-md) !important; }
 .book__fld { border-radius: 18px 6px 18px 6px; }
+
+/* слайдеры */
+.slider { position: relative; overflow: hidden; }
+.slider .slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.1s ease; }
+.slider .slide.is-on { opacity: 1; }
+.slide--ph {
+  display: grid; place-items: center;
+  background: radial-gradient(circle at 1px 1px, rgba(39, 96, 101, .16) 1px, transparent 0) 0 0 / 16px 16px, var(--porcelain-pale);
+}
+.slide--ph span { padding: 8px 16px; border-radius: 16px; background: var(--porcelain); font-size: 13px; color: var(--muted); }
+.slider__dots { position: absolute; z-index: 3; display: flex; gap: 8px; }
+.slider__dots button {
+  width: 8px; height: 8px; padding: 0; border: 0; border-radius: 4px;
+  background: rgba(249, 246, 240, .6); cursor: pointer;
+  transition: width .3s, background .3s;
+}
+.slider__dots button.is-on { width: 28px; background: var(--porcelain-pale); }
+
+.hero__slides { position: absolute; inset: 0; }
+.hero__slides .slider__dots { right: max(var(--gutter), calc((100vw - var(--wrap)) / 2)); bottom: 84px; }
+
+.tonus__media.slider { border-radius: var(--shape) !important; min-height: 420px; }
+.tonus__media.slider .slide { border-radius: 0 !important; }
+.tonus__media .slider__dots { left: 50%; bottom: 18px; transform: translateX(-50%); padding: 6px 10px; border-radius: 12px; background: rgba(27, 28, 27, .18); backdrop-filter: blur(4px); }
+
+@media (max-width: 720px) {
+  .hero__slides .slider__dots { bottom: 60px; right: 16px; }
+  .tonus__media.slider { min-height: 300px; }
+}

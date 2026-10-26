@@ -50,3 +50,38 @@
     });
   });
 })();
+
+// слайдеры: плавная смена, точки, автопрокрутка, свайп
+(function () {
+  document.querySelectorAll('.slider').forEach(function (sl) {
+    var slides = Array.prototype.slice.call(sl.querySelectorAll('.slide'));
+    var dotsBox = sl.querySelector('.slider__dots');
+    if (slides.length < 2) { if (dotsBox) dotsBox.remove(); return; }
+    var i = 0, timer = null, delay = Number(sl.dataset.auto) || 0;
+    var dots = slides.map(function (_, k) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.setAttribute('aria-label', 'Слайд ' + (k + 1));
+      b.addEventListener('click', function () { go(k); restart(); });
+      dotsBox.appendChild(b); return b;
+    });
+    function go(k) {
+      i = (k + slides.length) % slides.length;
+      slides.forEach(function (s, n) { s.classList.toggle('is-on', n === i); });
+      dots.forEach(function (d, n) { d.classList.toggle('is-on', n === i); });
+    }
+    function restart() {
+      if (!delay || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      clearInterval(timer); timer = setInterval(function () { go(i + 1); }, delay);
+    }
+    var x0 = null;
+    sl.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    sl.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) > 40) { go(i + (dx < 0 ? 1 : -1)); restart(); }
+    });
+    sl.addEventListener('mouseenter', function () { clearInterval(timer); });
+    sl.addEventListener('mouseleave', restart);
+    go(0); restart();
+  });
+})();
