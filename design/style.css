@@ -1238,3 +1238,13 @@ html, body { overflow-x: clip; }
 .hdr__lang a.is-on { background: var(--porcelain-pale); color: var(--teal-dark); box-shadow: 0 1px 3px rgba(15, 80, 85, .12); }
 .menu__lang { display: none !important; }
 @media (max-width: 720px) { .hdr__lang { margin-right: 0; } .hdr__lang a { padding: 5px 7px; } }
+
+/* разделители полей брони — ровные вертикальные линии */
+.book__fld { position: relative; }
+.book__fld + .book__fld { box-shadow: none !important; }
+.book__fld + .book__fld::before {
+  content: ''; position: absolute; left: -4px; top: 22%; bottom: 22%;
+  width: 1px; background: var(--line);
+}
+.book__fld:hover::before, .book__fld:hover + .book__fld::before { opacity: 0; }
+@media (max-width: 1080px) { .book__fld + .book__fld::before { content: none; } }
