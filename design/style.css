@@ -1458,3 +1458,17 @@ html, body { overflow-x: clip; }
 @media (max-width: 720px) {
   .hero__stage::after { background: linear-gradient(180deg, rgba(12, 26, 27, .15) 0%, rgba(12, 26, 27, .4) 30%, rgba(12, 26, 27, .75) 60%, rgba(12, 26, 27, .82) 100%) !important; }
 }
+
+/* быстрые ссылки → компактные преимущества, без наведения */
+.pane { flex-direction: row; align-items: center; gap: 14px; padding: 16px 18px; cursor: default; }
+.pane:hover { background: var(--porcelain); }
+.pane:hover .pane__art { background: var(--porcelain-pale); color: var(--teal); transform: none; }
+.pane:hover .pane__text b { color: var(--teal-dark); }
+.pane:hover .pane__text span { color: var(--muted); }
+.pane__text b::after { content: none !important; }
+.pane__text b { padding-right: 0; font-size: 15.5px; }
+.pane__text span { font-size: 13px; }
+.pane__art { width: 44px; height: 44px; }
+.pane__art svg { width: 26px; height: 26px; }
+.pane__text span { white-space: normal !important; overflow: visible; text-overflow: clip; line-height: 1.4; }
+.pane { padding: 16px 18px; }
