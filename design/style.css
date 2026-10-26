@@ -915,3 +915,35 @@ body.menu-open { overflow: hidden; }
   .hero__slides .slider__dots { bottom: 60px; right: 16px; }
   .tonus__media.slider { min-height: 300px; }
 }
+
+/* ================================================================
+   ПРАВИЛО ФОРМ
+   «Лист» (два скруглённых угла по диагонали) — только АКЦЕНТ:
+   не больше одного на блок. Используется для:
+     — плашки с текстом на первом экране;
+     — плитки «107 номеров»;
+     — главного фото блока: «Апартаменты для длительного проживания»,
+       ресторан, бассейн, карта.
+   Всё остальное (карточки, фото в карточках, плашки, поля, иконки) —
+   обычное ровное скругление: 24px карточки и фото, 16px мелкие плашки,
+   12px иконки, кнопки и теги — полностью круглые.
+   ================================================================ */
+:root { --r-card: 24px; --r-sm: 16px; --r-ico: 12px; }
+
+.leaf, .leaf__img img, .room, .room--all, .stay, .family__card, .family__img img,
+.event, .offer img, .tonus__grid, .reviews__box, .reviews__score, .rev, .ask__box,
+.manager, .reel, .book, .taste__img--sub { border-radius: var(--r-card) !important; }
+.leaf__img img, .family__img img { border-radius: calc(var(--r-card) - 8px) !important; }
+.hero__links a, .list li:has(.ico), .facts__list li, .book__fld, .specs li { border-radius: var(--r-sm) !important; }
+.ico, .ico--lg, .ico--sm { border-radius: var(--r-ico) !important; }
+.reviews__box, .tonus__grid, .ask__box { border-radius: 32px !important; }
+
+/* акценты-«листы» */
+.hero__text { border-radius: 120px 24px 120px 24px !important; }
+.facts__big { border-radius: 40px 12px 40px 12px !important; }
+.stay__img img, .taste__img--main, .tonus__media.slider, .contacts__map { border-radius: 96px 20px 96px 20px !important; }
+
+@media (max-width: 720px) {
+  .hero__text { border-radius: 80px 18px 80px 18px !important; }
+  .stay__img img, .taste__img--main, .tonus__media.slider, .contacts__map { border-radius: 64px 16px 64px 16px !important; }
+}
