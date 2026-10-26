@@ -1397,3 +1397,13 @@ html, body { overflow-x: clip; }
 @media (max-width: 720px) {
   .hero__stage::after { background: linear-gradient(180deg, rgba(15, 30, 31, .1) 0%, rgba(15, 30, 31, .35) 30%, rgba(15, 30, 31, .7) 60%, rgba(15, 30, 31, .78) 100%) !important; }
 }
+
+/* быстрые ссылки — маленькие плашки с фото, без «оконной» рамы */
+.pane { aspect-ratio: auto; height: 132px; border-radius: 16px; }
+.pane::before { content: none; }
+.pane::after { background: linear-gradient(90deg, rgba(15, 40, 42, .78) 0%, rgba(15, 40, 42, .45) 55%, rgba(15, 40, 42, .15) 100%); }
+.pane__text { left: 22px; right: 18px; top: 50%; bottom: auto; transform: translateY(-50%); gap: 3px; }
+.pane__text b { font-size: 17px; }
+.pane__text span { font-size: 13px; }
+.panes { gap: 12px; }
+@media (max-width: 720px) { .pane { flex-basis: 74vw; height: 116px; } }
