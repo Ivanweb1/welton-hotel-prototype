@@ -1227,3 +1227,14 @@ html, body { overflow-x: clip; }
   .book__tip::after { content: none; }
   .book__cta { flex-direction: column; align-items: stretch; gap: 8px; }
 }
+
+/* переключатель языка в шапке */
+.hdr__lang {
+  display: inline-flex !important; align-items: center; gap: 2px; padding: 3px; margin-right: 4px;
+  border-radius: 14px; background: var(--porcelain); font-size: 12px; color: var(--muted);
+}
+.hdr__lang a { padding: 5px 9px; border-radius: 11px; font-weight: 500; transition: background .2s, color .2s; }
+.hdr__lang a:hover { color: var(--teal-dark); }
+.hdr__lang a.is-on { background: var(--porcelain-pale); color: var(--teal-dark); box-shadow: 0 1px 3px rgba(15, 80, 85, .12); }
+.menu__lang { display: none !important; }
+@media (max-width: 720px) { .hdr__lang { margin-right: 0; } .hdr__lang a { padding: 5px 7px; } }
