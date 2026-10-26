@@ -23,3 +23,8 @@ python -m http.server 4412
 
 Фирменные цвета: Porcelain `#F1EBDD`, Deep Teal `#276065`, Ink `#1B1C1B`, акценты Apricot `#D27D5A`, Champagne `#FFEFCA`, Powder `#EFD6CF`.
 Шрифты: Onest 700/500 (основной), Philosopher Bold (акцентный, только слоганы).
+
+## Дизайн главной
+
+- `design/index.html` — главная в фирменном стиле (стили `design/style.css`, скрипт `design/script.js`)
+- Смотреть: `python -m http.server 4412` → http://localhost:4412/design/
