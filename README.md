@@ -15,3 +15,11 @@
 ```bash
 python -m http.server 4412
 ```
+
+## Материалы
+
+- `brand/` — брендбук «Вэлтон» (PDF) и логотипы в 4 цветах (SVG + PNG)
+- `assets/photos/` — фото со старого сайта weltonhotel.ru (уменьшенные копии, временно для дизайна)
+
+Фирменные цвета: Porcelain `#F1EBDD`, Deep Teal `#276065`, Ink `#1B1C1B`, акценты Apricot `#D27D5A`, Champagne `#FFEFCA`, Powder `#EFD6CF`.
+Шрифты: Onest 700/500 (основной), Philosopher Bold (акцентный, только слоганы).
