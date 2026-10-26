@@ -876,3 +876,13 @@ body.menu-open { overflow: hidden; }
 }
 .contacts__open::after { content: '↗'; color: var(--apricot); }
 .contacts__map .contacts__pin { top: calc(50% - 18px); }
+
+/* плашка у кнопки брони — без фона, с галочкой */
+.book__perk { padding: 0 6px 0 0; background: none; border-radius: 0; gap: 8px; font-size: 14px; color: var(--teal-dark); }
+.book__perk::before { content: none; }
+.book__perk svg { flex-shrink: 0; color: var(--apricot); }
+
+/* низкие широкие плашки — тот же «лист», но мельче, по высоте элемента */
+:root { --shape-md: 26px 8px 26px 8px; }
+.hero__links a, .book, .manager, .list li:has(.ico), .facts__list li { border-radius: var(--shape-md) !important; }
+.book__fld { border-radius: 18px 6px 18px 6px; }
