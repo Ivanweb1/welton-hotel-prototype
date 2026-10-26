@@ -1,23 +1,25 @@
 /* ВЭЛТОН — дизайн главной. Цвета и шрифты по брендбуку (brand/). */
 
 :root {
-  /* основные */
+  /* Палитра — 3 цвета: Porcelain (фон, плашки), Deep Teal (заголовки, кнопки, тёмные блоки),
+     Apricot (мелкие акценты). Остальное — их оттенки из тональных шкал брендбука. */
   --porcelain: #F1EBDD;
   --porcelain-light: #F7F4EB;
   --porcelain-pale: #F9F6F0;
   --teal: #276065;
   --teal-dark: #0F5055;
-  --teal-pale: #DCE5DC;
   --ink: #1B1C1B;
-  /* акценты */
   --apricot: #D27D5A;
-  --apricot-light: #F5D8C2;
-  --brick: #A65340;
-  --champagne: #FFEFCA;
-  --champagne-light: #FFF8E7;
-  --champagne-dark: #DBBC77;
-  --powder: #EFD6CF;
-  --powder-light: #F8EDE9;
+
+  /* служебные имена → те же три цвета */
+  --teal-pale: var(--porcelain);
+  --apricot-light: var(--porcelain);
+  --brick: var(--apricot);
+  --champagne: var(--porcelain);
+  --champagne-light: var(--porcelain);
+  --champagne-dark: rgba(39, 96, 101, .3);
+  --powder: var(--porcelain);
+  --powder-light: var(--porcelain);
 
   --text: #1B1C1B;
   --muted: rgba(27, 28, 27, .62);
@@ -232,13 +234,8 @@ body.menu-open { overflow: hidden; }
 .leaf:hover { transform: translateY(-6px); }
 .leaf__num { font-family: var(--font-accent); font-size: 44px; line-height: 1; margin-bottom: auto; }
 .leaf p { font-size: 15px; color: var(--muted); }
-.leaf--champagne { background: var(--champagne); }
-.leaf--champagne .leaf__num { color: var(--champagne-dark); }
-.leaf--powder { background: var(--powder); }
-.leaf--powder .leaf__num { color: var(--brick); }
-.leaf--teal { background: var(--teal-pale); }
-.leaf--teal .leaf__num { color: var(--teal); }
-.leaf--apricot { background: var(--apricot-light); }
+.leaf { background: var(--porcelain); }
+.leaf .leaf__num { color: var(--apricot); }
 .leaf--apricot .leaf__num { color: var(--apricot); }
 
 /* номера: горизонтальная лента */
@@ -434,7 +431,7 @@ body.menu-open { overflow: hidden; }
   padding-bottom: 56px; margin-bottom: 56px;
   border-bottom: 1px solid rgba(241, 235, 221, .16);
 }
-.ftr__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
+.ftr__grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1.3fr; gap: 32px; }
 .ftr__brand { display: grid; gap: 10px; justify-items: start; align-content: start; color: rgba(241, 235, 221, .72); font-size: 15px; }
 .ftr__logo { height: 64px; width: auto; margin-bottom: 12px; }
 .ftr__phone { font-size: 20px; font-weight: 700; color: var(--porcelain); margin-top: 8px; }
@@ -450,15 +447,17 @@ body.menu-open { overflow: hidden; }
 /* плавающая кнопка брони */
 .fab {
   position: fixed; right: 24px; bottom: 24px; z-index: 40;
-  display: flex; align-items: center; gap: 10px;
-  height: 60px; padding: 0 19px;
+  display: flex; align-items: center; justify-content: center; gap: 0;
+  min-width: 60px; height: 60px; padding: 0 19px;
   border-radius: 30px;
   background: var(--apricot); color: var(--porcelain-pale);
   box-shadow: 0 14px 34px -12px rgba(166, 83, 64, .6);
   opacity: 0; transform: translateY(16px); pointer-events: none;
   transition: opacity .3s, transform .3s, background .2s;
 }
-.fab span { max-width: 0; overflow: hidden; white-space: nowrap; transition: max-width .35s; font-size: 15px; }
+.fab svg { flex-shrink: 0; }
+.fab span { max-width: 0; margin-left: 0; overflow: hidden; white-space: nowrap; transition: max-width .35s, margin-left .35s; font-size: 15px; }
+.fab:hover span { margin-left: 10px; }
 .fab:hover { background: var(--brick); }
 .fab:hover span { max-width: 140px; }
 .fab.is-on { opacity: 1; transform: none; pointer-events: auto; }
@@ -539,6 +538,8 @@ body.menu-open { overflow: hidden; }
 
 /* ---------- адаптив ---------- */
 @media (max-width: 1300px) {
+  .ftr__grid { grid-template-columns: repeat(4, 1fr); }
+  .ftr__brand { grid-column: 1 / -1; }
   .hdr__nav { display: none; }
   .hdr__act { margin-left: auto; }
   .burger { display: block; }
@@ -602,7 +603,7 @@ body.menu-open { overflow: hidden; }
   .ftr { padding-top: 56px; }
   .ftr__slogan { padding-bottom: 40px; margin-bottom: 40px; }
   .ftr__grid { grid-template-columns: 1fr; gap: 32px; }
-  .fab { right: 16px; bottom: 16px; height: 56px; padding: 0 17px; }
+  .fab { right: 16px; bottom: 16px; min-width: 56px; height: 56px; padding: 0 17px; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
