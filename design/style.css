@@ -1323,3 +1323,21 @@ html, body { overflow-x: clip; }
   .hero__text::before { border-radius: 170px 170px 10px 10px; }
   .hero__text::after { top: 46px; width: 46px; height: 46px; }
 }
+
+/* ===== плашка первого экрана — окно фасада: прямоугольник, рама и фрамуга ===== */
+.hero__text {
+  width: 460px; padding: 124px 46px 46px !important;
+  border-radius: 14px !important;
+  background-color: rgba(249, 246, 240, .9) !important;
+  background-image: linear-gradient(rgba(39, 96, 101, .3), rgba(39, 96, 101, .3)) !important;
+  background-repeat: no-repeat !important;
+  background-size: calc(100% - 20px) 1px !important;
+  background-position: 10px 96px !important;
+}
+.hero__text::before { inset: 10px; border-radius: 6px; border-color: rgba(39, 96, 101, .3); }
+.hero__text::after { top: 30px; width: 44px; height: 44px; }
+@media (max-width: 720px) {
+  .hero__text { width: 100%; padding: 108px 22px 30px !important; border-radius: 12px !important; background-position: 10px 84px !important; }
+  .hero__text::before { border-radius: 5px; }
+  .hero__text::after { top: 24px; width: 40px; height: 40px; }
+}
