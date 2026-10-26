@@ -1424,3 +1424,37 @@ html, body { overflow-x: clip; }
 .pane:hover .pane__text b { color: var(--porcelain-pale); }
 .pane:hover .pane__text span { color: rgba(249, 246, 240, .8); }
 @media (max-width: 720px) { .pane { height: auto; flex-basis: 70vw; } }
+
+/* быстрые ссылки: текст слева, контурная иллюстрация справа */
+.pane { display: flex; align-items: center; justify-content: space-between; flex-direction: row-reverse; gap: 12px; padding: 0 20px 0 0; min-height: 108px; }
+.pane__text { flex: 1; min-width: 0; padding: 20px 0 20px 22px; }
+.pane__text b { display: inline-flex; align-items: center; gap: 8px; }
+.pane__text b::after { content: '→'; font-weight: 500; color: var(--apricot); opacity: 0; transform: translateX(-6px); transition: opacity .25s, transform .25s; }
+.pane:hover .pane__text b::after { opacity: 1; transform: none; color: var(--porcelain-pale); }
+.pane__art {
+  flex-shrink: 0; display: grid; place-items: center;
+  width: 60px; height: 60px; border-radius: 50%;
+  background: var(--porcelain-pale); color: var(--teal);
+  transition: background .25s, color .25s, transform .35s cubic-bezier(.2, .7, .2, 1);
+}
+.pane__art svg { width: 36px; height: 36px; }
+.pane:hover .pane__art { background: rgba(249, 246, 240, .14); color: var(--porcelain-pale); transform: rotate(-6deg) scale(1.04); }
+@media (max-width: 720px) { .pane__art { width: 52px; height: 52px; } .pane__art svg { width: 30px; height: 30px; } }
+.pane { flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 18px; padding: 22px 22px 20px; min-height: 0; }
+.pane__text { padding: 0; width: 100%; }
+.pane__text b { display: block; position: relative; padding-right: 22px; }
+.pane__text b::after { position: absolute; right: 0; top: 0; }
+.pane__text span { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pane__art { width: 52px; height: 52px; }
+.pane__art svg { width: 30px; height: 30px; }
+@media (max-width: 1300px) { .pane__text span { white-space: normal; } }
+
+/* первый экран: сильнее затемнение под текстом */
+.hero__stage::after {
+  background:
+    linear-gradient(90deg, rgba(12, 26, 27, .55) 0%, rgba(12, 26, 27, .25) 45%, rgba(12, 26, 27, 0) 75%),
+    linear-gradient(180deg, rgba(12, 26, 27, .2) 0%, rgba(12, 26, 27, 0) 28%, rgba(12, 26, 27, .25) 55%, rgba(12, 26, 27, .7) 100%) !important;
+}
+@media (max-width: 720px) {
+  .hero__stage::after { background: linear-gradient(180deg, rgba(12, 26, 27, .15) 0%, rgba(12, 26, 27, .4) 30%, rgba(12, 26, 27, .75) 60%, rgba(12, 26, 27, .82) 100%) !important; }
+}
