@@ -8,7 +8,7 @@
   function onScroll() {
     var y = window.scrollY;
     hdr.classList.toggle('is-scrolled', y > 8);
-    if (fab && book) fab.classList.toggle('is-on', y > book.offsetTop + book.offsetHeight);
+    if (fab) fab.classList.toggle('is-on', y > window.innerHeight * 0.85);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
@@ -23,7 +23,6 @@
   burger.addEventListener('click', function () { setMenu(!hdr.classList.contains('is-open')); });
   hdr.querySelectorAll('.menu a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
-  window.addEventListener('resize', function () { if (window.innerWidth > 1300) setMenu(false); });
 
   // фильтр спецпредложений
   var tagBtns = document.querySelectorAll('.tagbtn');
@@ -84,4 +83,24 @@
     sl.addEventListener('mouseleave', restart);
     go(0); restart();
   });
+})();
+
+// плавное появление блоков при прокрутке
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js-reveal');
+  var sel = '.sec__head, .leaf, .room, .stay__text, .family__card, .offers__bar, .offer, .tonus__text, .tonus__media, .taste__media, .taste__text, .event, .manager, .reel, .reviews__score, .rev, .contacts__map, .contacts__info, .ask__box, .quick .hero__links a, .ftr__slogan';
+  var els = document.querySelectorAll(sel);
+  els.forEach(function (el) {
+    el.setAttribute('data-rv', '');
+    var sibs = Array.prototype.filter.call(el.parentNode.children, function (c) { return c.matches(sel); });
+    var k = sibs.indexOf(el);
+    if (k > 0) el.style.transitionDelay = Math.min(k, 5) * 0.09 + 's';
+  });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  els.forEach(function (el) { io.observe(el); });
 })();
