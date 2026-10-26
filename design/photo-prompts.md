@@ -1,0 +1,117 @@
+# Фото для главной: промпты для генерации
+
+Генерируем **на основе реальных фото со старого сайта** (image-to-image / reference), а не с нуля.
+Задача: сохранить настоящий интерьер отеля (планировку, мебель, материалы, окна) и поменять только свет, цвет и качество.
+Атмосфера: лёгкость, уют, тепло.
+
+Исходники лежат в `assets/photos/`. Прямые ссылки — в таблице ниже.
+Готовые файлы складывайте в `assets/photos/gen/` под именами из колонки «Сохранить как» (JPG, качество 85–90).
+
+## Общая часть промпта (добавлять в конец каждого)
+
+```
+Keep the exact same room layout, furniture, materials, windows and camera angle as the reference photo — this is a real hotel, do not invent or remove objects. Only improve light, color and quality. Soft natural daylight from the window, warm and airy atmosphere, light cream and warm beige tones, gentle soft shadows, no harsh contrast, slightly lifted shadows, clean and tidy, editorial hotel photography, shot on a full-frame camera, 35mm lens, high resolution, sharp details, realistic, no people unless present in the reference, no text, no watermark.
+```
+
+Негативный промпт (если генератор поддерживает):
+
+```
+dark, gloomy, cold blue tones, harsh flash, oversaturated, HDR look, cartoon, CGI, distorted furniture, extra objects, warped lines, text, watermark, people added
+```
+
+## Слоты на странице
+
+| # | Где на главной | Исходник | Формат | Сохранить как |
+|---|---|---|---|---|
+| 1 | Первый экран, фон | [room-main.webp](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/room-main.webp) | 16:9, 2560×1440 | `hero.jpg` |
+| 2 | Номера — «Смарт» | [room-bed.webp](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/room-bed.webp) | 4:3, 1600×1200 | `room-smart.jpg` |
+| 3 | Номера — «Апартаменты» и блок «Апартаменты для длительного проживания» | [room-tray.jpg](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/room-tray.jpg) | 4:3, 1600×1200 | `room-apartments.jpg` |
+| 4 | Номера — «Семейный полулюкс» | [room-main.webp](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/room-main.webp) | 4:3, 1600×1200 | `room-family.jpg` |
+| 5 | Номера — «Люкс с террасой» | нужен реальный снимок террасы; пока [breakfast-in-bed.jpg](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/breakfast-in-bed.jpg) | 4:3, 1600×1200 | `room-suite.jpg` |
+| 6 | «Детям» и спецпредложение «Всей семьёй» | [bathroom-kid.png](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/bathroom-kid.png) | 4:5, 1200×1500 | `kids.jpg` |
+| 7 | «С питомцем» | исходника нет — на базе [room-bed.webp](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/room-bed.webp) | 4:5, 1200×1500 | `pets.jpg` |
+| 8 | Спецпредложение «Спортивный пакет» | [stadium.jpg](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/stadium.jpg) | 1:1, 1400×1400 | `sport.jpg` |
+| 9 | Бассейн, сауна и тренажёрный зал | [spa-pool.webp](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/spa-pool.webp) | 1:1, 1400×1400 | `pool.jpg` |
+| 10 | Ресторан — большое фото | [dinner.png](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/dinner.png) | 4:5, 1200×1500 | `restaurant.jpg` |
+| 11 | Ресторан — малое фото | [breakfast-in-bed.jpg](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/breakfast-in-bed.jpg) | 3:4, 1200×1600 | `breakfast.jpg` |
+| 12 | Мероприятия — «Деловые» | [conference.webp](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/conference.webp) | 5:4, 1500×1200 | `event-business.jpg` |
+| 13 | Мероприятия — «Свадебные» | [terrace-breakfast.webp](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/terrace-breakfast.webp) | 5:4, 1500×1200 | `event-wedding.jpg` |
+| 14 | Мероприятия — «Частные» | [lobby.jpg](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/lobby.jpg) | 5:4, 1500×1200 | `event-private.jpg` |
+
+## Промпты
+
+**1. hero.jpg — первый экран**
+```
+Wide interior photo of a hotel room with a wooden slatted partition, wall-mounted TV, wooden desk with an emerald velvet chair and a tall green plant, bed visible on the left, large window with sheer curtains on the right. Bright morning daylight flooding through the window, warm cream and honey wood tones, calm and welcoming. Leave calm, uncluttered space on the left third of the frame for text overlay.
+```
+
+**2. room-smart.jpg — «Смарт»**
+```
+Compact cozy hotel room, neatly made double bed with white linen and folded white bathrobes, wooden headboard panel, small plant on the side. Soft warm daylight, light beige walls, fresh and airy feeling.
+```
+
+**3. room-apartments.jpg — «Апартаменты»**
+```
+Close-up of a hotel bed with white linen and a grey quilted throw, a wooden breakfast tray with an open magazine, a glass of orange juice and a pear, warm wall lamp glowing above, wooden headboard. Lazy slow morning mood, soft golden daylight, warm and homey.
+```
+
+**4. room-family.jpg — «Семейный полулюкс»**
+```
+Spacious hotel suite: living zone with a wooden desk and emerald velvet chair, wooden slatted partition, sleeping area visible behind it, large window with soft curtains. Bright natural daylight, warm cream tones, feeling of space for the whole family. Slightly different crop from a straight-on view, focus on the living area.
+```
+
+**5. room-suite.jpg — «Люкс с террасой»**
+> Лучше заменить реальным фото террасы люкса. Если его нет — генерировать из исходника 5 так, чтобы не придумывать террасу:
+```
+Hotel suite bed with a grey quilted bedspread and a dark round tray with syrniki, sour cream and berries, soft window light, crisp white linen. Warm, slow weekend morning, light and airy.
+```
+
+**6. kids.jpg — «Детям»**
+```
+A small child in striped pajamas kneeling on a chair at a bathroom sink in a hotel bathroom with light marble walls, wood accents, warm vertical mirror lights. Warm, tender family mood, soft bright light, cozy and safe.
+```
+
+**7. pets.jpg — «С питомцем»**
+> Исходника нет, поэтому берём номер из исходника 2 и добавляем питомца. Это единственный слот, где добавляем объект.
+```
+The same hotel room as in the reference: neatly made double bed with white linen and wooden headboard. A friendly golden retriever lies calmly on a soft pet bed on the floor next to the bed, a small bowl nearby. Soft warm daylight, cozy and welcoming, natural and realistic, the dog looks relaxed and happy.
+```
+
+**8. sport.jpg — «Спортивный пакет»**
+```
+Football stadium with a green pitch under the open roof, evening match atmosphere, warm stadium lights, deep blue sky at golden hour. Festive, energetic but warm color grading, no visible logos or brand names.
+```
+
+**9. pool.jpg — бассейн**
+```
+Indoor hotel swimming pool with chrome handrails in the foreground, turquoise water, wooden wall panels, a large seascape wall mural and soft ceiling spotlights. Calm, clean, relaxing spa atmosphere, warm light, inviting water. Square composition, pool and handrails centered.
+```
+
+**10. restaurant.jpg — ресторан, большое**
+```
+Elegant dinner table in a restaurant: white plates, crystal glasses, a silver candelabra with lit white candles, a couple's hands resting on the table, people cropped out of the frame. Warm candlelight, romantic and cozy evening, soft bokeh background.
+```
+
+**11. breakfast.jpg — ресторан, малое**
+```
+Top view of a dark round tray with golden syrniki, sour cream, jam and fresh strawberries on a grey quilted hotel bedspread. Bright soft morning light, appetizing, warm tones.
+```
+
+**12. event-business.jpg — «Деловые»**
+```
+Hotel conference room set for a business meeting: long table with dark chairs, a large screen on a stand, air conditioning in the ceiling, clean light walls. Bright even daylight, neutral warm tones, professional yet welcoming.
+```
+
+**13. event-wedding.jpg — «Свадебные»**
+```
+Hotel terrace with a table set for a celebration: white tablecloth, bouquet of pink and white roses, fruit, pastries and glasses of juice, green plants, city buildings in the background. Bright festive daylight, warm and joyful.
+```
+
+**14. event-private.jpg — «Частные»**
+```
+Hotel lobby corner: brass luggage cart with coats, potted green plant, dark wall with a geometric wood relief, patterned stone floor. Warm welcoming light, soft glow, stylish and cozy.
+```
+
+## После генерации
+
+Залейте файлы в Releases (как референс) или сразу в `assets/photos/gen/` — я подключу их на страницу.
