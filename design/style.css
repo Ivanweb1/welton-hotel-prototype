@@ -1407,3 +1407,20 @@ html, body { overflow-x: clip; }
 .pane__text span { font-size: 13px; }
 .panes { gap: 12px; }
 @media (max-width: 720px) { .pane { flex-basis: 74vw; height: 116px; } }
+
+/* первый экран: заголовок в одну строку, описание в одну строку */
+.hero__text { max-width: none !important; }
+.hero__text .slogan { white-space: nowrap; font-size: clamp(44px, 5.6vw, 88px); }
+.hero__text .lead { max-width: none; white-space: nowrap; }
+@media (max-width: 900px) { .hero__text .slogan, .hero__text .lead { white-space: normal; } }
+
+/* быстрые ссылки — маленькие текстовые плашки без фото */
+.pane { height: auto; background: var(--porcelain); transition: background .25s; }
+.pane::after { content: none; }
+.pane__text { position: static; transform: none; padding: 20px 22px; color: var(--text); }
+.pane__text b { color: var(--teal-dark); transition: color .25s; }
+.pane__text span { color: var(--muted); opacity: 1; transition: color .25s; }
+.pane:hover { background: var(--teal); }
+.pane:hover .pane__text b { color: var(--porcelain-pale); }
+.pane:hover .pane__text span { color: rgba(249, 246, 240, .8); }
+@media (max-width: 720px) { .pane { height: auto; flex-basis: 70vw; } }
