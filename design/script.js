@@ -125,3 +125,9 @@
   links.forEach(function (a) { a.addEventListener('mouseenter', function () { show(a); }); a.addEventListener('focus', function () { show(a); }); });
   if (links[0]) links[0].classList.add('is-on');
 })();
+
+// выбор варианта первого экрана: ?hero=a|b|c|d
+(function () {
+  var v = (location.search.match(/hero=([abcd])/) || [])[1];
+  if (v) document.documentElement.classList.add('hv-' + v);
+})();
