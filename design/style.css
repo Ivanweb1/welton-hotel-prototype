@@ -518,7 +518,7 @@ body.menu-open { overflow: hidden; }
 .socials { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
 
 .reviews__box { padding: 64px; border-radius: 48px; background: var(--champagne-light); }
-.reviews__box .reviews__grid { padding: 0; background: none; border-radius: 0; }
+.reviews__box .reviews__grid { padding: 0; background: none; border-radius: 0; align-items: start; }
 .stars { color: var(--apricot); font-size: 20px; letter-spacing: 4px; }
 
 .contacts__title { font-size: clamp(26px, 2.6vw, 36px); }
@@ -533,6 +533,25 @@ body.menu-open { overflow: hidden; }
 .ask__select { display: grid; gap: 4px; padding: 10px 20px; border-radius: 20px; background: var(--porcelain-pale); }
 .ask__select span { font-size: 12px; color: var(--muted); }
 .ask__select select { border: 0; background: none; padding: 0; outline: none; font: inherit; }
+
+/* отзывы и карта Яндекса */
+.reviews__meta { font-weight: 700; color: var(--teal-dark); }
+.reviews__award {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 14px; border-radius: 16px;
+  background: var(--porcelain-pale); color: var(--teal-dark) !important; font-size: 13px;
+}
+.reviews__award::before { content: '★'; color: var(--apricot); }
+.aspects { display: grid; gap: 10px; width: 100%; margin-top: 8px; }
+.aspects li { display: grid; grid-template-columns: 110px 1fr 40px; align-items: center; gap: 12px; font-size: 14px; }
+.aspects i { height: 6px; border-radius: 3px; background: rgba(39, 96, 101, .12); position: relative; overflow: hidden; }
+.aspects i::after { content: ''; position: absolute; inset: 0 auto 0 0; width: var(--v); border-radius: 3px; background: var(--teal); }
+.aspects b { text-align: right; font-weight: 700; color: var(--teal-dark); }
+.reviews__src { font-size: 12px; color: var(--muted); }
+.reviews__widget { position: relative; overflow: hidden; min-height: 560px; border-style: solid; border-color: rgba(39, 96, 101, .15); background: var(--porcelain-pale); }
+.reviews__widget iframe, .contacts__map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.contacts__map { overflow: hidden; }
+.contacts__map-label { z-index: 0; }
 
 .ftr__tags { font-size: 12px; color: rgba(241, 235, 221, .5); margin-top: 8px; max-width: 420px; }
 
@@ -591,7 +610,8 @@ body.menu-open { overflow: hidden; }
   .list--compact li { grid-template-columns: 1fr; }
   .tonus__grid, .reviews__grid, .ask__box { padding: 32px 20px; border-radius: 32px; }
   .reviews__num { font-size: 88px; }
-  .reviews__widget { min-height: 220px; }
+  .reviews__widget { min-height: 520px; }
+  .aspects li { grid-template-columns: 100px 1fr 36px; }
   .events, .offers__grid { grid-template-columns: 1fr; }
   .hero__links { grid-template-columns: 1fr; }
   .reel { flex-basis: 64vw; }
