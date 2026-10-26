@@ -284,33 +284,32 @@
         <h2>Специальные предложения</h2>
         <p class="lead lead--wide">Хороший знак: для вас есть предложение. Тарифы для семей и пар, длительного проживания и командировок, спортивных команд и болельщиков. Выберите свой повод — условия уже подготовлены.</p>
       </div>
-      <a href="../offers.html" class="link link--head">Все предложения</a>
     </div>
-    <div class="tags" role="tablist">
+    <div class="offers__bar">
+      <div class="tags" role="tablist">
       <button class="tagbtn is-on" data-filter="all">Все</button>
       <button class="tagbtn" data-filter="family">Семьям</button>
       <button class="tagbtn" data-filter="long">Надолго</button>
       <button class="tagbtn" data-filter="business">Командировки</button>
       <button class="tagbtn" data-filter="sport">Спорт</button>
     </div>
+      <a href="../offers.html" class="link link--head">Все предложения</a>
+    </div>
     <div class="offers__grid">
       <article class="offer" data-cat="family">
-        <img src="../assets/photos/gen/kids.jpg" alt="" loading="lazy">
-        <span class="tag">Семьям</span>
+        <div class="offer__img"><img src="../assets/photos/gen/kids.jpg" alt="" loading="lazy"><span class="tag">Семьям</span></div>
         <h3>«Всей семьёй»</h3>
         <p>Берите с собой детей, а не полчемодана детских вещей. Второй номер для детей — со скидкой, кроватка, халатик и игрушка — в номере, поздний выезд в день отъезда.</p>
         <div class="offer__foot"><span>пт — вс</span><a href="../offers.html" class="link">Условия</a></div>
       </article>
       <article class="offer" data-cat="long">
-        <img src="../assets/photos/gen/room-apartments.jpg" alt="" loading="lazy">
-        <span class="tag">Надолго</span>
+        <div class="offer__img"><img src="../assets/photos/gen/room-apartments.jpg" alt="" loading="lazy"><span class="tag">Надолго</span></div>
         <h3>«Как дома, только лучше»</h3>
         <p>Апартаменты с полноценной кухней на 7, 14 и 30 ночей и дольше. Своя кухня, свой ритм и сервис отеля: уборка по графику, прачечная, можно с питомцем.</p>
         <div class="offer__foot"><span>от 7 ночей</span><a href="../apartments.html" class="link">Условия</a></div>
       </article>
       <article class="offer" data-cat="sport">
-        <img src="../assets/photos/gen/sport.jpg" alt="" loading="lazy">
-        <span class="tag">Спорт</span>
+        <div class="offer__img"><img src="../assets/photos/gen/sport.jpg" alt="" loading="lazy"><span class="tag">Спорт</span></div>
         <h3>Спортивный пакет</h3>
         <p>Перед стартом — отдых, бассейн и завтрак чемпиона. Удачу на игру вы принесёте сами. Команда целиком в одном отеле: групповые тарифы, питание по режиму, зал для разборов.</p>
         <div class="offer__foot"><span>для команд</span><a href="../offers.html#sport" class="link">Условия</a></div>
@@ -434,11 +433,11 @@
     </div>
   </div>
   <div class="track" id="life-track">
-    <div class="reel reel--champagne"><span>Видео</span></div>
-    <div class="reel reel--powder"><span>Видео</span></div>
-    <div class="reel reel--teal"><span>Видео</span></div>
-    <div class="reel reel--apricot"><span>Видео</span></div>
-    <div class="reel reel--champagne"><span>Видео</span></div>
+    <a href="#" class="reel"><img src="../assets/photos/gen/restaurant.jpg" alt="Вечер в ресторане «Берёзки»" loading="lazy"><span class="reel__play" aria-label="Смотреть видео"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></a>
+    <a href="#" class="reel"><img src="../assets/photos/gen/breakfast.jpg" alt="Завтрак в номере" loading="lazy"><span class="reel__play" aria-label="Смотреть видео"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></a>
+    <a href="#" class="reel"><img src="../assets/photos/gen/pool.jpg" alt="Бассейн отеля" loading="lazy"><span class="reel__play" aria-label="Смотреть видео"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></a>
+    <a href="#" class="reel"><img src="../assets/photos/gen/event-private.jpg" alt="Лобби отеля" loading="lazy"><span class="reel__play" aria-label="Смотреть видео"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></a>
+    <a href="#" class="reel"><img src="../assets/photos/gen/room-apartments.jpg" alt="Утро в апартаментах" loading="lazy"><span class="reel__play" aria-label="Смотреть видео"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></a>
   </div>
   <div class="wrap">
     <div class="socials">
@@ -463,8 +462,7 @@
       </div>
       <div class="reviews__grid">
         <div class="reviews__score">
-          <div class="stars" aria-hidden="true">★★★★★</div>
-          <div class="reviews__num">5,0</div>
+          <div class="reviews__top"><div class="reviews__num">5,0</div><div class="stars" aria-label="5 из 5">★★★★★</div></div>
           <p class="reviews__meta">2585 оценок · 1299 отзывов</p>
           <p class="reviews__award">Хорошее место 2026 — награда Яндекс Карт</p>
           <ul class="aspects">
@@ -515,10 +513,11 @@
 <!-- ============ 09 КАРТА ============ -->
 <section class="sec contacts" id="contacts">
   <div class="wrap contacts__grid">
-    <div class="contacts__map">
-      <span class="contacts__map-label">Карта</span>
-      <iframe src="https://yandex.ru/map-widget/v1/?ll=30.290647%2C59.958614&amp;z=16&amp;pt=30.290647%2C59.958614%2Cpm2orgl" title="ВЭЛТОН на Яндекс Картах" loading="lazy" allowfullscreen></iframe>
-    </div>
+    <a href="https://yandex.ru/maps/org/velton_klab_otel_i_apartamenty/156075852702/" target="_blank" rel="noopener" class="contacts__map" aria-label="Открыть ВЭЛТОН на Яндекс Картах">
+      <img src="https://static-maps.yandex.ru/1.x/?ll=30.290647%2C59.958614&amp;z=16&amp;size=650%2C450&amp;scale=2&amp;l=map&amp;lang=ru_RU" alt="Карта: ул. Малая Разночинная, 11" loading="lazy">
+      <span class="contacts__pin" aria-hidden="true"></span>
+      <span class="contacts__open">Открыть в Яндекс Картах</span>
+    </a>
     <div class="contacts__info">
       <h2 class="contacts__title">Санкт-Петербург, ул. Малая Разночинная, 11, стр. 1</h2>
       <p class="lead">Историческая часть Петроградской стороны: рядом набережная Невы, метро «Чкаловская» и главные спортивные арены города.</p>

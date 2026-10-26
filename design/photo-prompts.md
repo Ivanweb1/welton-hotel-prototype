@@ -115,3 +115,50 @@ Hotel lobby corner: brass luggage cart with coats, potted green plant, dark wall
 ## После генерации
 
 Залейте файлы в Releases (как референс) или сразу в `assets/photos/gen/` — я подключу их на страницу.
+
+---
+
+# Обложки видео для блока «Мы в соцсетях»
+
+5 вертикальных обложек **9:16, 1080×1920**. Генерируем в стиле уже готовых фото сайта: берите как референс файлы из `assets/photos/gen/` (указаны ниже) — тот же свет, тёплые кремовые тона, мягкие тени.
+Сохраняйте в `assets/photos/gen/` под именами из таблицы. На странице поверх обложки уже стоит кнопка «плей».
+
+Темы взяты из согласованного текста блока: «Клевер на пенке капучино, новое блюдо «Берёзок», вечер у рояля и итоги «Счастливого листа»» + утро в бассейне.
+
+| # | Тема | Референс | Сохранить как |
+|---|---|---|---|
+| 1 | Клевер на пенке капучино | [breakfast.jpg](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/gen/breakfast.jpg) | `reel-cappuccino.jpg` |
+| 2 | Новое блюдо «Берёзок» | [restaurant.jpg](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/gen/restaurant.jpg) | `reel-dish.jpg` |
+| 3 | Вечер у рояля в лобби | [event-private.jpg](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/gen/event-private.jpg) | `reel-piano.jpg` |
+| 4 | Итоги «Счастливого листа» | [event-private.jpg](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/gen/event-private.jpg) | `reel-clover.jpg` |
+| 5 | Утро в бассейне | [pool.jpg](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/gen/pool.jpg) | `reel-pool.jpg` |
+
+Общая часть (добавлять в конец каждого промпта):
+```
+Vertical 9:16 frame for a social media video cover. Same visual style as the reference photo: soft natural light, warm cream and honey-wood tones, gentle shadows, light and cozy atmosphere, editorial hotel photography, realistic, high detail. Keep the central area calm and uncluttered (a round play button will be placed in the center). No text, no logos, no watermark.
+```
+
+**1. reel-cappuccino.jpg**
+```
+Close-up top-down view of a cappuccino in a white ceramic cup on a light wooden table in a hotel restaurant, latte art in the shape of a four-leaf clover on the milk foam, a small saucer with a teaspoon, a croissant slightly out of focus nearby, morning daylight from a window.
+```
+
+**2. reel-dish.jpg**
+```
+An elegant plated signature dish on a white plate in a cozy hotel restaurant, warm candlelight, crystal glass and silver cutlery around, shallow depth of field, the dish in the lower third of the frame, appetizing and refined.
+```
+
+**3. reel-piano.jpg**
+```
+A vintage black grand piano in a warm hotel lobby in the evening, soft golden lamp light, a potted green plant, dark wall with a geometric wooden relief like in the reference, an open lid and sheet music, intimate musical evening mood, no people or only hands on the keys.
+```
+
+**4. reel-clover.jpg**
+```
+A hand holding a small cream-colored card with an embossed four-leaf clover at a hotel reception desk, warm lobby light, a small bouquet and a brass bell nearby, festive but calm mood of a prize draw.
+```
+
+**5. reel-pool.jpg**
+```
+Indoor hotel swimming pool in the early morning, calm turquoise water with soft reflections, chrome handrails in the foreground, wooden wall panels and a seascape mural, a folded white towel on a lounger, fresh and serene atmosphere.
+```
