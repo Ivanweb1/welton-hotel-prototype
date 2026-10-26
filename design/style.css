@@ -1372,3 +1372,28 @@ html, body { overflow-x: clip; }
 @media (max-width: 720px) { .hero__text::after { left: 22px; } }
 .hdr__lang { height: 34px; padding: 3px; gap: 0; line-height: 1; }
 .hdr__lang a { display: inline-grid; place-items: center; height: 28px; min-width: 34px; padding: 0 8px; line-height: 1; }
+
+/* первый экран: только заголовок и описание — над формой бронирования */
+.hero__stage { align-items: flex-end; padding: 140px 0 150px; }
+.hero__stage::after { background: linear-gradient(180deg, rgba(15, 30, 31, .18) 0%, rgba(15, 30, 31, 0) 30%, rgba(15, 30, 31, .2) 55%, rgba(15, 30, 31, .62) 100%) !important; }
+.hero__text {
+  width: auto; max-width: 720px !important; padding: 0 !important;
+  background: none !important; background-image: none !important; backdrop-filter: none !important;
+  border-radius: 0 !important; box-shadow: none !important; text-align: left;
+}
+.hero__text::before, .hero__text::after { content: none !important; }
+.hero__text .slogan { color: var(--porcelain-pale); font-size: clamp(52px, 6.2vw, 96px); line-height: .95; text-shadow: 0 2px 30px rgba(0, 0, 0, .18); }
+.hero__text .lead { margin: 16px 0 0; max-width: 520px; color: rgba(249, 246, 240, .9); font-size: 18px; }
+.hero__slides .slider__dots { bottom: 160px; }
+@media (max-width: 1080px) { .hero__stage { padding-bottom: 260px; } }
+@media (max-width: 720px) {
+  .hero__stage { min-height: 100svh; padding: 0 0 20px; justify-content: flex-end; }
+  .hero__wrap { margin-top: auto; }
+  .hero__text .slogan { font-size: 48px; }
+  .hero__text .lead { font-size: 16px; }
+  .hero__book { margin-top: 20px; }
+  .hero__slides .slider__dots { top: 100px; }
+}
+@media (max-width: 720px) {
+  .hero__stage::after { background: linear-gradient(180deg, rgba(15, 30, 31, .1) 0%, rgba(15, 30, 31, .35) 30%, rgba(15, 30, 31, .7) 60%, rgba(15, 30, 31, .78) 100%) !important; }
+}
