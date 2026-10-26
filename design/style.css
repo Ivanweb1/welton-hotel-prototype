@@ -1203,3 +1203,27 @@ html, body { overflow-x: clip; }
 @media (max-width: 720px) {
   .hero__text { padding: 30px 22px 26px !important; border-radius: 64px 16px 64px 16px !important; }
 }
+
+/* «Лучшая цена — на сайте» — ярлычок над кнопкой формы */
+.book__cta { position: relative; }
+.book__tip {
+  position: absolute; right: 0; bottom: calc(100% + 12px);
+  padding: 7px 12px; border-radius: 10px; white-space: nowrap;
+  background: var(--teal-dark); color: var(--porcelain-pale); font-size: 12.5px;
+  opacity: 0; transform: translateY(4px); pointer-events: none;
+  transition: opacity .2s, transform .2s;
+}
+.book__tip::after { content: ''; position: absolute; right: 28px; top: 100%; border: 6px solid transparent; border-top-color: var(--teal-dark); }
+.book__cta:hover .book__tip, .book__btn:focus-visible + .book__tip { opacity: 1; transform: none; }
+.book__perk { display: none !important; }
+
+/* пометка в спецпредложениях */
+.offers__right { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.offers__note { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
+.offers__note svg { color: var(--apricot); flex-shrink: 0; }
+
+@media (max-width: 1080px) {
+  .book__tip { position: static; opacity: 1; transform: none; padding: 0; background: none; color: var(--muted); text-align: center; white-space: normal; }
+  .book__tip::after { content: none; }
+  .book__cta { flex-direction: column; align-items: stretch; gap: 8px; }
+}
