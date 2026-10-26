@@ -22,7 +22,41 @@
         <img src="../brand/WELTON_horizontal+descriptor_primary.svg" alt="ВЭЛТОН. Отель и апартаменты">
       </a>
       <nav class="hdr__nav" aria-label="Основное меню">
-        <a href="../rooms.html">Номера</a>
+        <div class="hdr__drop">
+          <a href="../rooms.html" class="hdr__drop-btn" aria-haspopup="true">Номера<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="drop">
+            <div class="drop__panel">
+              <div class="drop__main">
+                <div class="drop__groups">
+                  <div class="drop__group"><span class="drop__label">Номера</span>
+                    <a href="../room.html" data-img="../assets/photos/gen/room-smart.jpg" data-cap="Нужное под рукой, лишнего нет">Смарт</a>
+                    <a href="../room.html" data-img="../assets/photos/gen/room-smart.jpg" data-cap="Продуманный номер для одного или двоих">Стандарт</a>
+                    <a href="../room.html" data-img="../assets/photos/gen/room-family.jpg" data-cap="Гостиная с кухней и отдельная спальня">Семейный полулюкс</a>
+                    <a href="../room.html" data-img="../assets/photos/gen/room-family.jpg" data-cap="Простор и тишина Петроградской">Люкс</a>
+                  </div>
+                  <div class="drop__group"><span class="drop__label">Апартаменты</span>
+                    <a href="../room.html" data-img="../assets/photos/gen/room-apartments.jpg" data-cap="Своя кухня и свой ритм">Апартаменты</a>
+                    <a href="../room.html" data-img="../assets/photos/gen/room-apartments.jpg" data-cap="Больше места для долгих поездок">Улучшенные апартаменты</a>
+                  </div>
+                  <div class="drop__group"><span class="drop__label">С террасой</span>
+                    <a href="../room.html" data-img="../assets/photos/gen/room-suite.jpg" data-cap="Утренний кофе на свежем воздухе">Комфорт с террасой</a>
+                    <a href="../room.html" data-img="../assets/photos/gen/room-suite.jpg" data-cap="Терраса и вид на город">Премиум с террасой</a>
+                    <a href="../room.html" data-img="../assets/photos/gen/room-suite.jpg" data-cap="Собственная терраса с видом на закат">Люкс с террасой</a>
+                    <a href="../room.html" data-img="../assets/photos/gen/hero.jpg" data-cap="Панорамные окна и большая терраса">Панорамный люкс с террасой</a>
+                  </div>
+                </div>
+                <div class="drop__foot">
+                  <span>Десять категорий: мятные и бежевые тона, натуральные материалы и продуманные мелочи.</span>
+                  <a href="../rooms.html" class="link">Все номера</a>
+                </div>
+              </div>
+              <a href="../rooms.html" class="drop__preview">
+                <img src="../assets/photos/gen/room-smart.jpg" alt="">
+                <span class="drop__cap"><b>Смарт</b><span>Нужное под рукой, лишнего нет</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
         <a href="../restaurant.html">Ресторан</a>
         <a href="../spa.html">Бассейн</a>
         <a href="../events.html">Мероприятия</a>
@@ -36,25 +70,30 @@
     </div>
   </div>
   <div class="menu" aria-hidden="true">
-    <div class="wrap menu__in">
-      <nav class="menu__nav">
-        <a href="../about.html">О нас</a>
-        <a href="../rooms.html">Номера</a>
-        <a href="../apartments.html">Апартаменты</a>
-        <a href="../restaurant.html">Ресторан «Берёзки»</a>
-        <a href="../spa.html">Бассейн и сауна</a>
-        <a href="../events.html">Мероприятия</a>
-        <a href="../offers.html">Спецпредложения</a>
-        <a href="../contacts.html">Контакты</a>
-      </nav>
-      <div class="menu__side">
-        <a href="tel:+78123465555" class="menu__phone">+7 (812) 346-55-55</a>
-        <a href="mailto:info@weltonhotel.ru">info@weltonhotel.ru</a>
-        <span>Санкт-Петербург, ул. Малая Разночинная, 11, стр. 1</span>
-        <span>Петроградская сторона</span>
-        <a href="https://yandex.ru/maps/org/velton_klab_otel_i_apartamenty/156075852702/reviews/" target="_blank" rel="noopener">Отзывы 5,0 — Яндекс</a>
-        <span class="menu__lang"><b>RUS</b> / ENG</span>
-        <a href="#booking" class="btn">Забронировать</a>
+    <div class="wrap">
+      <div class="menu__panel">
+        <nav class="menu__nav" aria-label="Все разделы">
+          <a href="../about.html">О нас</a>
+          <a href="../rooms.html">Номера</a>
+          <a href="../apartments.html">Апартаменты</a>
+          <a href="../restaurant.html">Ресторан «Берёзки»</a>
+          <a href="../spa.html">Бассейн и сауна</a>
+          <a href="../events.html">Мероприятия</a>
+          <a href="../offers.html">Спецпредложения</a>
+          <a href="../contacts.html">Контакты</a>
+        </nav>
+        <div class="menu__side">
+          <a href="tel:+78123465555" class="menu__phone">+7 (812) 346-55-55</a>
+          <span class="menu__note">Круглосуточно</span>
+          <a href="mailto:info@weltonhotel.ru">info@weltonhotel.ru</a>
+          <span>ул. Малая Разночинная, 11, стр. 1<br>Петроградская сторона</span>
+          <a href="https://yandex.ru/maps/org/velton_klab_otel_i_apartamenty/156075852702/reviews/" target="_blank" rel="noopener" class="menu__rating"><b>5,0</b> ★ Отзывы на Яндекс Картах</a>
+          <span class="menu__lang"><b>RUS</b> / ENG</span>
+        </div>
+        <a href="../apartments.html" class="menu__promo">
+          <img src="../assets/photos/gen/room-apartments.jpg" alt="">
+          <span class="menu__promo-text"><b>Апартаменты надолго</b><span>Кухня и сервис отеля, от 7 ночей</span></span>
+        </a>
       </div>
     </div>
   </div>

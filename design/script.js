@@ -22,6 +22,7 @@
   }
   burger.addEventListener('click', function () { setMenu(!hdr.classList.contains('is-open')); });
   hdr.querySelectorAll('.menu a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  hdr.querySelector('.menu').addEventListener('click', function (e) { if (!e.target.closest('.menu__panel')) setMenu(false); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
 
   // фильтр спецпредложений
@@ -103,4 +104,24 @@
     });
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
   els.forEach(function (el) { io.observe(el); });
+})();
+
+// панель «Номера»: превью меняется при наведении на категорию
+(function () {
+  var panel = document.querySelector('.drop__panel');
+  if (!panel) return;
+  var img = panel.querySelector('.drop__preview img');
+  var capB = panel.querySelector('.drop__cap b');
+  var capS = panel.querySelector('.drop__cap span');
+  var links = panel.querySelectorAll('.drop__group a');
+  var t;
+  function show(a) {
+    links.forEach(function (l) { l.classList.toggle('is-on', l === a); });
+    capB.textContent = a.textContent; capS.textContent = a.dataset.cap;
+    if (img.getAttribute('src') === a.dataset.img) return;
+    clearTimeout(t); img.classList.add('is-fading');
+    t = setTimeout(function () { img.src = a.dataset.img; img.classList.remove('is-fading'); }, 180);
+  }
+  links.forEach(function (a) { a.addEventListener('mouseenter', function () { show(a); }); a.addEventListener('focus', function () { show(a); }); });
+  if (links[0]) links[0].classList.add('is-on');
 })();
