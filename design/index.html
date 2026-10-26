@@ -4,7 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-<title>ВЭЛТОН — Отель и апартаменты на Петроградской стороне</title>
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="yandex" content="noindex, nofollow">
+<title>ВЭЛТОН — Отель и апартаменты</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&family=Philosopher:wght@700&display=swap" rel="stylesheet">
@@ -12,26 +14,39 @@
 </head>
 <body>
 
-<!-- ============ ШАПКА ============ -->
+<!-- ============ ХЕДЕР ============ -->
 <header class="hdr" id="top">
+  <div class="hdr__top">
+    <div class="wrap hdr__top-in">
+      <div class="hdr__top-group">
+        <span>Санкт-Петербург, ул. Малая Разночинная, 11, стр. 1</span>
+        <span>Петроградская сторона</span>
+      </div>
+      <div class="hdr__top-group">
+        <span>Отзывы 4,9 — Яндекс</span>
+        <a href="mailto:info@weltonhotel.ru">info@weltonhotel.ru</a>
+        <a href="tel:+78123465555" class="hdr__phone">+7 (812) 346-55-55</a>
+        <span class="hdr__lang"><b>RUS</b> / ENG</span>
+      </div>
+    </div>
+  </div>
   <div class="wrap hdr__in">
     <a href="index.html" class="hdr__logo" aria-label="ВЭЛТОН — на главную">
       <img src="../brand/WELTON_horizontal+descriptor_primary.svg" alt="ВЭЛТОН. Отель и апартаменты">
     </a>
     <nav class="hdr__nav" aria-label="Основное меню">
+      <a href="../about.html">О нас</a>
       <a href="../rooms.html">Номера</a>
       <a href="../apartments.html">Апартаменты</a>
-      <a href="../restaurant.html">Ресторан</a>
-      <a href="../spa.html">Бассейн</a>
+      <a href="../restaurant.html">Ресторан «Берёзки»</a>
+      <a href="../spa.html">Бассейн и сауна</a>
       <a href="../events.html">Мероприятия</a>
-      <a href="../offers.html">Предложения</a>
+      <a href="../offers.html">Спецпредложения</a>
       <a href="../contacts.html">Контакты</a>
     </nav>
     <div class="hdr__act">
-      <a href="tel:+78123465555" class="hdr__phone">+7 (812) 346-55-55</a>
-      <span class="hdr__lang"><b>RU</b> / EN</span>
       <a href="#booking" class="btn btn--sm">Забронировать</a>
-      <button class="burger" aria-label="Открыть меню" aria-expanded="false"><i></i><i></i></button>
+      <button class="burger" aria-label="Меню" aria-expanded="false"><i></i><i></i></button>
     </div>
   </div>
   <div class="menu" aria-hidden="true">
@@ -48,8 +63,7 @@
       </nav>
       <div class="menu__side">
         <a href="tel:+78123465555" class="menu__phone">+7 (812) 346-55-55</a>
-        <span>Круглосуточно</span>
-        <span>ул. Малая Разночинная, 11, стр. 1</span>
+        <span>RUS / ENG</span>
         <a href="#booking" class="btn">Забронировать</a>
       </div>
     </div>
@@ -58,97 +72,108 @@
 
 <main>
 
-<!-- ============ ПЕРВЫЙ ЭКРАН ============ -->
+<!-- ============ 01 ПЕРВЫЙ ЭКРАН ============ -->
 <section class="hero">
   <div class="wrap hero__grid">
     <div class="hero__text">
       <p class="eyebrow">Отель и апартаменты · Петроградская сторона</p>
       <h1 class="slogan">Всё будет хорошо!</h1>
-      <p class="lead">Просторные номера и апартаменты с кухней, ресторан, который не закрывается, и бассейн после долгой дороги. Мы позаботимся, чтобы ваш день сложился.</p>
-      <ul class="hero__facts">
-        <li><b>107</b><span>номеров и апартаментов</span></li>
-        <li><b>24/7</b><span>ресторан «Берёзки»</span></li>
-        <li><b>4,9</b><span>на Яндекс Картах</span></li>
+      <p class="lead">Отель и апартаменты на Петроградской стороне. Мы позаботимся, чтобы ваш день сложился.</p>
+      <ul class="chips">
+        <li>107 номеров и апартаментов</li>
+        <li>Ресторан «Берёзки» 24 часа</li>
+        <li>Бассейн и финская сауна</li>
+        <li>3 зала для встреч</li>
+        <li>С кошками и собаками</li>
       </ul>
+      <div class="btns">
+        <a href="#booking" class="btn">Найти номер</a>
+        <a href="#rooms" class="btn btn--ghost">Посмотреть номера</a>
+      </div>
     </div>
     <div class="hero__media">
       <img src="../assets/photos/room-main.webp" alt="Номер отеля ВЭЛТОН" class="hero__img">
-      <div class="hero__badge">
-        <span class="hero__badge-dot"></span>
-        <span>5 минут пешком<br>до метро «Чкаловская»</span>
-      </div>
     </div>
   </div>
 
-  <!-- форма брони -->
+  <div class="wrap">
+    <div class="hero__links">
+      <a href="../apartments.html"><b>Апартаменты надолго</b><span>Кухня и сервис отеля, от 7 ночей</span></a>
+      <a href="../events-business.html"><b>Конференции</b><span>3 зала, техника и кофе-брейки</span></a>
+      <a href="../kids.html"><b>Детям</b><span>Кроватка и халатик уже в номере</span></a>
+      <a href="../offers.html#sport"><b>Спорт</b><span>Тарифы для команд и болельщиков</span></a>
+    </div>
+  </div>
+
+  <!-- 01.1 форма брони -->
   <div class="wrap" id="booking">
     <form class="book" onsubmit="return false">
       <label class="book__fld">
         <span>Заезд</span>
-        <input type="text" value="12 ноября" aria-label="Дата заезда">
+        <input type="text" placeholder="Дата" aria-label="Заезд">
       </label>
       <label class="book__fld">
         <span>Выезд</span>
-        <input type="text" value="14 ноября" aria-label="Дата выезда">
+        <input type="text" placeholder="Дата" aria-label="Выезд">
       </label>
       <label class="book__fld">
         <span>Гости</span>
-        <input type="text" value="2 взрослых, без детей" aria-label="Гости">
+        <input type="text" value="2 взрослых, 0 детей" aria-label="Гости">
       </label>
-      <label class="book__fld book__fld--promo">
+      <label class="book__fld">
         <span>Промокод</span>
-        <input type="text" placeholder="Если есть" aria-label="Промокод">
+        <input type="text" placeholder="Ввести код" aria-label="Промокод">
       </label>
       <button class="btn book__btn">Найти номер</button>
-      <p class="book__note">На сайте отеля — лучшая цена. Остальное подготовим к вашему приезду.</p>
+      <p class="book__note">На сайте отеля — выгоднее. Остальное мы подготовим к вашему приезду.</p>
     </form>
   </div>
 </section>
 
-<!-- ============ ЧЕТЫРЕ ЛИСТА ============ -->
+<!-- ============ 01.2 ЧЕТЫРЕ ЛИСТА ============ -->
 <section class="sec leaves">
   <div class="wrap">
     <div class="sec__head sec__head--center">
-      <p class="eyebrow">Почему с нами спокойно</p>
       <h2>Четыре листа хорошего дня</h2>
     </div>
     <div class="leaves__grid">
-      <a href="#rooms" class="leaf leaf--champagne">
+      <div class="leaf leaf--champagne">
         <span class="leaf__num">01</span>
         <h3>Хорошее пространство</h3>
-        <p>Просторно одному, удобно вдвоём, хватает места всей семье — и даже питомцу.</p>
-      </a>
-      <a href="#taste" class="leaf leaf--powder">
+        <p>Номера и апартаменты с кухней: просторно одному, удобно вдвоём, хватает места всей семье — и даже питомцу</p>
+      </div>
+      <div class="leaf leaf--powder">
         <span class="leaf__num">02</span>
         <h3>Хороший вкус</h3>
-        <p>Завтрак, после которого хочется действовать, и ужин в честь удачного дня.</p>
-      </a>
-      <a href="#tonus" class="leaf leaf--teal">
+        <p>Ресторан «Берёзки» работает круглосуточно: завтрак, после которого хочется действовать, и ужин в честь удачного дня</p>
+      </div>
+      <div class="leaf leaf--teal">
         <span class="leaf__num">03</span>
         <h3>Хороший тонус</h3>
-        <p>Бассейн, финская сауна и тренажёрный зал — набраться сил после дороги или матча.</p>
-      </a>
-      <a href="#company" class="leaf leaf--apricot">
+        <p>Бассейн, финская сауна и тренажёрный зал, чтобы набраться сил после дороги, матча или долгого дня</p>
+      </div>
+      <div class="leaf leaf--apricot">
         <span class="leaf__num">04</span>
         <h3>Хорошая компания</h3>
-        <p>Залы для встреч, банкеты и семейные праздники — всё, ради чего собираются вместе.</p>
-      </a>
+        <p>Залы для встреч, банкеты и семейные праздники — всё, ради чего собираются вместе</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 01 НОМЕРА ============ -->
+<!-- ============ 02 НОМЕРА И АПАРТАМЕНТЫ ============ -->
 <section class="sec rooms" id="rooms">
   <div class="wrap">
     <div class="sec__head">
       <div>
-        <p class="eyebrow"><span class="eyebrow__num">01</span>Хорошее пространство</p>
+        <p class="eyebrow">Хорошее пространство</p>
         <h2>Номера и апартаменты</h2>
-        <p class="lead">Десять категорий — от «Смарта» до люкса с собственной террасой. Мятные и бежевые тона, натуральные материалы и продуманные мелочи.</p>
+        <p class="lead lead--wide">Десять категорий — от «Смарта» до «Панорамного люкса с террасой». Номера в мятных и бежевых тонах, натуральные материалы и продуманные мелочи, апартаменты с полноценной кухней для долгих поездок, люксы с собственной террасой. Просторно одному, удобно вдвоём, хватает места всей семье.</p>
       </div>
       <div class="sec__ctl">
         <button class="arrow" data-scroll="rooms-track" data-dir="-1" aria-label="Назад">←</button>
         <button class="arrow" data-scroll="rooms-track" data-dir="1" aria-label="Вперёд">→</button>
+        <a href="../rooms.html" class="btn btn--ghost">Все номера</a>
       </div>
     </div>
   </div>
@@ -157,10 +182,10 @@
       <div class="room__img"><img src="../assets/photos/room-bed.webp" alt="Номер Смарт" loading="lazy"></div>
       <div class="room__body">
         <h3>Смарт</h3>
-        <ul class="specs"><li>от 18 м²</li><li>до 2 гостей</li><li>двуспальная кровать</li></ul>
+        <ul class="specs"><li>от 00 м²</li><li>до 2 гостей</li><li>1 двуспальная</li></ul>
         <p>Эргономичная планировка: нужное под рукой, лишнего нет.</p>
         <div class="room__foot">
-          <span class="price">от <b>0 000 ₽</b> / ночь</span>
+          <span class="price">от <b>00 000 ₽</b> / ночь</span>
           <a href="../room.html" class="link">Подробнее</a>
         </div>
       </div>
@@ -172,7 +197,7 @@
         <ul class="specs"><li>25 м²</li><li>до 2 гостей</li><li>кухонная зона</li></ul>
         <p>Домашний уют в поездке: можно готовить и жить в своём ритме.</p>
         <div class="room__foot">
-          <span class="price">от <b>0 000 ₽</b> / ночь</span>
+          <span class="price">от <b>00 000 ₽</b> / ночь</span>
           <a href="../room.html" class="link">Подробнее</a>
         </div>
       </div>
@@ -181,10 +206,10 @@
       <div class="room__img"><img src="../assets/photos/room-main.webp" alt="Семейный полулюкс" loading="lazy"></div>
       <div class="room__body">
         <h3>Семейный полулюкс</h3>
-        <ul class="specs"><li>от 40 м²</li><li>до 4 гостей</li><li>гостиная и спальня</li></ul>
+        <ul class="specs"><li>от 00 м²</li><li>до 4 гостей</li><li>гостиная и спальня</li></ul>
         <p>Гостиная с кухней и отдельная спальня — у каждого своё место.</p>
         <div class="room__foot">
-          <span class="price">от <b>0 000 ₽</b> / ночь</span>
+          <span class="price">от <b>00 000 ₽</b> / ночь</span>
           <a href="../room.html" class="link">Подробнее</a>
         </div>
       </div>
@@ -193,54 +218,129 @@
       <div class="room__img"><img src="../assets/photos/breakfast-in-bed.jpg" alt="Люкс с террасой" loading="lazy"></div>
       <div class="room__body">
         <h3>Люкс с террасой</h3>
-        <ul class="specs"><li>от 50 м²</li><li>до 3 гостей</li><li>панорамная терраса</li></ul>
+        <ul class="specs"><li>от 00 м²</li><li>до 3 гостей</li><li>панорамная терраса</li></ul>
         <p>Собственная терраса с видом на город и закат.</p>
         <div class="room__foot">
-          <span class="price">от <b>0 000 ₽</b> / ночь</span>
+          <span class="price">от <b>00 000 ₽</b> / ночь</span>
           <a href="../room.html" class="link">Подробнее</a>
         </div>
       </div>
     </article>
     <a href="../rooms.html" class="room room--all">
-      <span>Все 10 категорий</span>
+      <span>Все номера</span>
       <span class="arrow arrow--light">→</span>
     </a>
   </div>
 
   <div class="wrap">
+    <!-- Апартаменты для длительного проживания -->
     <div class="stay">
       <div class="stay__text">
-        <p class="eyebrow eyebrow--light">От 7 ночей</p>
-        <h3>Как дома, только лучше</h3>
-        <p>Апартаменты для долгих поездок: своя кухня, свой ритм и сервис отеля — уборка по графику, прачечная, можно с питомцем.</p>
-        <a href="../apartments.html" class="btn btn--light">Апартаменты надолго</a>
+        <h3>Апартаменты для длительного проживания</h3>
+        <p>Как дома, только лучше: своя кухня, свой ритм и сервис отеля на 7, 14, 30 ночей и дольше.</p>
+        <a href="../apartments.html" class="btn btn--light">Апартаменты для длительного проживания</a>
       </div>
       <div class="stay__img"><img src="../assets/photos/room-tray.jpg" alt="" loading="lazy"></div>
     </div>
+  </div>
+</section>
 
+<!-- ============ 02.1 ДЕТИ И ПИТОМЦЫ ============ -->
+<section class="sec sec--near">
+  <div class="wrap">
     <div class="family">
-      <article class="family__card family__card--powder">
+      <article class="family__card family__card--powder" id="kids">
         <img src="../assets/photos/bathroom-kid.png" alt="Ребёнок в ванной комнате отеля" loading="lazy">
         <div>
+          <p class="eyebrow">Хорошее пространство для всей семьи</p>
           <h3>Детям</h3>
-          <p>Берите детей, а не полчемодана детских вещей: кроватка, халатик и игрушка будут ждать в номере. До 3 лет — бесплатно.</p>
-          <a href="../kids.html" class="link">Детская политика</a>
+          <p>Берите с собой детей, а не полчемодана детских вещей: кроватка, халатик и игрушка будут ждать в номере. Скажите при бронировании, сколько лет детям, — и мы подготовим номер заранее. Дети до 3 лет живут с родителями бесплатно.</p>
+          <a href="../kids.html" class="btn btn--ghost btn--sm">Детская политика</a>
         </div>
       </article>
-      <article class="family__card family__card--champagne">
+      <article class="family__card family__card--champagne" id="pets">
         <div class="family__ph" aria-hidden="true"><span>Фото<br>с питомцем</span></div>
         <div>
+          <p class="eyebrow">Компания с хвостом</p>
           <h3>С питомцем</h3>
-          <p>С собакой? Отлично. С большой — тоже. А кошкам мы рады всегда. Расскажите о питомце при бронировании.</p>
-          <a href="../pets.html" class="link">Правила для питомцев</a>
+          <p>С собакой? Отлично. С большой — тоже. А кошкам мы рады всегда. Сообщите о питомце при бронировании — вид, породу и вес, — и мы подготовим номер. Правила — на одной странице.</p>
+          <a href="../pets.html" class="btn btn--ghost btn--sm">Правила для гостей с питомцами</a>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ============ 02 ВКУС ============ -->
-<section class="sec taste" id="taste">
+<!-- ============ 03 СПЕЦПРЕДЛОЖЕНИЯ ============ -->
+<section class="sec offers" id="offers">
+  <div class="wrap">
+    <div class="sec__head">
+      <div>
+        <p class="eyebrow">Хороший знак</p>
+        <h2>Специальные предложения</h2>
+        <p class="lead lead--wide">Хороший знак: для вас есть предложение. Тарифы для семей и пар, длительного проживания и командировок, спортивных команд и болельщиков. Выберите свой повод — условия уже подготовлены.</p>
+      </div>
+      <a href="../offers.html" class="btn btn--ghost">Все предложения</a>
+    </div>
+    <div class="tags" role="tablist">
+      <button class="tagbtn is-on" data-filter="all">Все</button>
+      <button class="tagbtn" data-filter="family">Семьям</button>
+      <button class="tagbtn" data-filter="long">Надолго</button>
+      <button class="tagbtn" data-filter="business">Командировки</button>
+      <button class="tagbtn" data-filter="sport">Спорт</button>
+    </div>
+    <div class="offers__grid">
+      <article class="offer" data-cat="family">
+        <img src="../assets/photos/bathroom-kid.png" alt="" loading="lazy">
+        <span class="tag">Семьям</span>
+        <h3>«Всей семьёй»</h3>
+        <p>Берите с собой детей, а не полчемодана детских вещей. Второй номер для детей — со скидкой, кроватка, халатик и игрушка — в номере, поздний выезд в день отъезда.</p>
+        <div class="offer__foot"><span>пт — вс</span><a href="../offers.html" class="link">Условия</a></div>
+      </article>
+      <article class="offer" data-cat="long">
+        <img src="../assets/photos/room-tray.jpg" alt="" loading="lazy">
+        <span class="tag">Надолго</span>
+        <h3>«Как дома, только лучше»</h3>
+        <p>Апартаменты с полноценной кухней на 7, 14 и 30 ночей и дольше. Своя кухня, свой ритм и сервис отеля: уборка по графику, прачечная, можно с питомцем.</p>
+        <div class="offer__foot"><span>от 7 ночей</span><a href="../apartments.html" class="link">Условия</a></div>
+      </article>
+      <article class="offer" data-cat="sport">
+        <img src="../assets/photos/stadium.jpg" alt="" loading="lazy">
+        <span class="tag">Спорт</span>
+        <h3>Спортивный пакет</h3>
+        <p>Перед стартом — отдых, бассейн и завтрак чемпиона. Удачу на игру вы принесёте сами. Команда целиком в одном отеле: групповые тарифы, питание по режиму, зал для разборов.</p>
+        <div class="offer__foot"><span>для команд</span><a href="../offers.html#sport" class="link">Условия</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 БАССЕЙН И САУНА ============ -->
+<section class="sec tonus" id="spa">
+  <div class="wrap tonus__grid">
+    <div class="tonus__text">
+      <p class="eyebrow">Хороший тонус</p>
+      <h2>Бассейн, сауна и тренажёрный зал</h2>
+      <p class="lead">Силы после дороги, матча или долгого дня. Утром — заплыв и тренировка, вечером — финская сауна. Для гостей отеля бассейн и сауна открыты бесплатно каждый день с 7:00 до 19:00, тренажёрный зал — с 7:00 до 23:00.</p>
+      <ul class="list">
+        <li><b>Бассейн</b><span>Свободное посещение по расписанию, для детей — нарукавники и круги</span></li>
+        <li><b>Финская сауна</b><span>Рядом с бассейном, после плавания или конференции</span></li>
+        <li><b>Тренажёрный зал</b><span>Кардио и силовые тренажёры, с 7:00</span></li>
+        <li><b>Расписание и правила</b><span>Часы работы и что взять с собой</span></li>
+      </ul>
+      <div class="btns">
+        <a href="../spa.html#prices" class="btn">Расписание и цены</a>
+        <a href="../spa.html#signup" class="btn btn--ghost">Записаться</a>
+      </div>
+    </div>
+    <div class="tonus__media">
+      <img src="../assets/photos/spa-pool.webp" alt="Бассейн отеля" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 РЕСТОРАН ============ -->
+<section class="sec taste" id="rest">
   <div class="wrap taste__grid">
     <div class="taste__media">
       <img src="../assets/photos/dinner.png" alt="Ужин в ресторане «Берёзки»" class="taste__img taste__img--main" loading="lazy">
@@ -248,14 +348,14 @@
       <span class="taste__stamp">24<small>часа</small></span>
     </div>
     <div class="taste__text">
-      <p class="eyebrow"><span class="eyebrow__num">02</span>Хороший вкус</p>
+      <p class="eyebrow">Хороший вкус</p>
       <h2>Ресторан «Берёзки»</h2>
-      <p class="lead">Работает круглосуточно и открыт для соседей по Петроградской. Вечером — бар, авторские сеты бренд-шефа и живой звук старинного рояля в лобби.</p>
+      <p class="lead">Ресторан отеля ВЭЛТОН работает круглосуточно и открыт для соседей по Петроградской. Завтрак, после которого хочется действовать, деловой обед и ужин в честь удачного дня. Вечером — бар, авторские сеты бренд-шефа и живой звук старинного рояля в лобби.</p>
       <ul class="list">
+        <li><b>Меню</b><span>Основное и детское меню, барная карта, «Клеверное меню»</span></li>
         <li><b>Завтраки</b><span>Каждое утро, включены в проживание</span></li>
-        <li><b>Меню</b><span>Основное, детское и «Клеверное»</span></li>
-        <li><b>Бар и рум-сервис</b><span>Когда захочется, хоть ночью</span></li>
-        <li><b>Банкеты</b><span>От 3 500 ₽ на гостя</span></li>
+        <li><b>Часы работы</b><span>Ресторан — 24 часа, бар и рум-сервис</span></li>
+        <li><b>Банкеты</b><span>Праздники в «Берёзках» — от 3 500 ₽ на гостя</span></li>
       </ul>
       <div class="btns">
         <a href="../restaurant.html#booking" class="btn">Забронировать стол</a>
@@ -265,65 +365,50 @@
   </div>
 </section>
 
-<!-- ============ 03 ТОНУС ============ -->
-<section class="sec tonus" id="tonus">
-  <div class="wrap tonus__grid">
-    <div class="tonus__text">
-      <p class="eyebrow"><span class="eyebrow__num">03</span>Хороший тонус</p>
-      <h2>Бассейн, сауна и тренажёрный зал</h2>
-      <p class="lead">Утром — заплыв и тренировка, вечером — финская сауна. Для гостей отеля бесплатно, каждый день.</p>
-      <dl class="hours">
-        <div><dt>Бассейн</dt><dd>7:00 — 19:00</dd></div>
-        <div><dt>Финская сауна</dt><dd>7:00 — 19:00</dd></div>
-        <div><dt>Тренажёрный зал</dt><dd>7:00 — 23:00</dd></div>
-      </dl>
-      <a href="../spa.html" class="btn">Расписание и правила</a>
-    </div>
-    <div class="tonus__media">
-      <img src="../assets/photos/spa-pool.webp" alt="Бассейн отеля" loading="lazy">
-      <p class="tonus__note">Для детей — нарукавники и круги</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 04 КОМПАНИЯ ============ -->
-<section class="sec company" id="company">
+<!-- ============ 06 МЕРОПРИЯТИЯ ============ -->
+<section class="sec company" id="events">
   <div class="wrap">
     <div class="sec__head">
       <div>
-        <p class="eyebrow"><span class="eyebrow__num">04</span>Хорошая компания</p>
+        <p class="eyebrow">Хорошая компания</p>
         <h2>Мероприятия</h2>
-        <p class="lead">Деловые встречи, свадьбы и семейные праздники. Три зала, банкеты в «Берёзках» и номера для всех, кто приехал вместе.</p>
+        <p class="lead lead--wide">Всё, ради чего собираются вместе: деловые встречи и конференции, семейные праздники, банкеты, друзья. Три зала, банкеты в «Берёзках» и номера для всех, кто приехал вместе. Мы продумаем детали, чтобы ваше время сложилось.</p>
       </div>
       <a href="../events.html" class="btn btn--ghost">Все площадки</a>
     </div>
     <div class="events">
-      <a href="../events-business.html" class="event">
+      <article class="event">
         <img src="../assets/photos/conference.webp" alt="Конференц-зал" loading="lazy">
         <div class="event__body">
-          <h3>Деловые</h3>
-          <p>3 зала до 65 гостей, техника и кофе-брейки минута в минуту.</p>
+          <h3>Деловые и корпоративные</h3>
+          <ul class="specs"><li>3 зала</li><li>до 65 гостей</li><li>38,5–72,4 м²</li></ul>
+          <p>Конференции, тренинги, переговоры и стратегические сессии. Кофе-брейки минута в минуту, участники живут в том же здании.</p>
+          <div class="event__foot"><span>Рассадки · оборудование · кофе-брейки</span><a href="../events-business.html" class="link">Подробнее</a></div>
         </div>
-      </a>
-      <a href="../events-wedding.html" class="event">
+      </article>
+      <article class="event">
         <img src="../assets/photos/terrace-breakfast.webp" alt="Терраса, накрытая к празднику" loading="lazy">
         <div class="event__body">
           <h3>Свадебные</h3>
-          <p>Банкет, номер для новобрачных и гости в одном месте.</p>
+          <ul class="specs"><li>пакеты услуг</li><li>от 3 500 ₽ на гостя</li><li>номер для новобрачных</li></ul>
+          <p>Банкет в «Берёзках», номер для новобрачных и размещение гостей в одном месте. Вам — праздник, нам — все детали.</p>
+          <div class="event__foot"><span></span><a href="../events-wedding.html" class="link">Подробнее</a></div>
         </div>
-      </a>
-      <a href="../events-private.html" class="event">
+      </article>
+      <article class="event">
         <img src="../assets/photos/lobby.jpg" alt="Лобби отеля" loading="lazy">
         <div class="event__body">
           <h3>Частные</h3>
-          <p>Юбилеи, дни рождения и встречи друзей — меню под повод.</p>
+          <ul class="specs"><li>юбилеи</li><li>дни рождения</li><li>детские праздники</li></ul>
+          <p>Юбилеи, дни рождения, детские праздники и встречи друзей. Меню собираем под повод и число гостей.</p>
+          <div class="event__foot"><span></span><a href="../events-private.html" class="link">Подробнее</a></div>
         </div>
-      </a>
+      </article>
     </div>
     <div class="manager">
       <div>
         <h3>Менеджер мероприятий</h3>
-        <p>Подберёт зал и рассадку, пришлёт смету и будет рядом в день события.</p>
+        <p>Ваш персональный менеджер подберёт зал и рассадку, пришлёт смету, согласует меню и будет рядом в день мероприятия.</p>
       </div>
       <div class="btns">
         <a href="../events.html#request" class="btn">Оставить заявку</a>
@@ -333,54 +418,64 @@
   </div>
 </section>
 
-<!-- ============ ПРЕДЛОЖЕНИЯ ============ -->
-<section class="sec offers" id="offers">
+<!-- ============ 07 СОЦСЕТИ ============ -->
+<section class="sec life" id="life">
   <div class="wrap">
-    <div class="sec__head sec__head--center">
-      <p class="eyebrow">Хороший знак</p>
-      <h2>Для вас есть предложение</h2>
-      <p class="lead">Выберите свой повод — условия уже подготовлены.</p>
+    <div class="sec__head">
+      <div>
+        <p class="eyebrow">Жизнь отеля</p>
+        <h2>Мы в соцсетях</h2>
+        <p class="lead lead--wide">Клевер на пенке капучино, новое блюдо «Берёзок», вечер у рояля и итоги «Счастливого листа». Как в ВЭЛТОН складываются хорошие дни — в наших соцсетях.</p>
+      </div>
+      <div class="sec__ctl">
+        <button class="arrow" data-scroll="life-track" data-dir="-1" aria-label="Назад">←</button>
+        <button class="arrow" data-scroll="life-track" data-dir="1" aria-label="Вперёд">→</button>
+      </div>
     </div>
-    <div class="offers__grid">
-      <article class="offer">
-        <img src="../assets/photos/bathroom-kid.png" alt="" loading="lazy">
-        <span class="tag">Семьям</span>
-        <h3>«Всей семьёй»</h3>
-        <p>Второй номер для детей со скидкой и поздний выезд в день отъезда.</p>
-        <a href="../offers.html" class="link">Условия</a>
-      </article>
-      <article class="offer">
-        <img src="../assets/photos/room-tray.jpg" alt="" loading="lazy">
-        <span class="tag">Надолго</span>
-        <h3>«Как дома, только лучше»</h3>
-        <p>Апартаменты с кухней на 7, 14 и 30 ночей и дольше.</p>
-        <a href="../apartments.html" class="link">Условия</a>
-      </article>
-      <article class="offer">
-        <img src="../assets/photos/stadium.jpg" alt="" loading="lazy">
-        <span class="tag">Спорт</span>
-        <h3>Спортивный пакет</h3>
-        <p>Отдых перед стартом, бассейн и завтрак чемпиона. Удачу принесёте сами.</p>
-        <a href="../offers.html#sport" class="link">Условия</a>
-      </article>
+  </div>
+  <div class="track" id="life-track">
+    <div class="reel reel--champagne"><span>Видео</span></div>
+    <div class="reel reel--powder"><span>Видео</span></div>
+    <div class="reel reel--teal"><span>Видео</span></div>
+    <div class="reel reel--apricot"><span>Видео</span></div>
+    <div class="reel reel--champagne"><span>Видео</span></div>
+  </div>
+  <div class="wrap">
+    <div class="socials">
+      <a href="#" class="btn btn--ghost btn--sm">VK</a>
+      <a href="#" class="btn btn--ghost btn--sm">Telegram</a>
+      <a href="#" class="btn btn--ghost btn--sm">MAX</a>
+      <a href="../life.html" class="btn btn--ghost btn--sm">Фотогалерея</a>
     </div>
   </div>
 </section>
 
-<!-- ============ ОТЗЫВЫ ============ -->
+<!-- ============ 08 ОТЗЫВЫ ============ -->
 <section class="sec reviews">
-  <div class="wrap reviews__grid">
-    <div class="reviews__score">
-      <p class="eyebrow">Здесь всё складывается</p>
-      <div class="reviews__num">4,9</div>
-      <p>Больше 500 отзывов на Яндекс Картах. Гости пишут о просторных номерах, вкусных завтраках и людях, которые помнят мелочи.</p>
-      <a href="#" class="link">Все отзывы на Яндекс Картах</a>
+  <div class="wrap">
+    <div class="reviews__box">
+      <div class="sec__head">
+        <div>
+          <p class="eyebrow">Здесь всё складывается</p>
+          <h2>Отзывы гостей</h2>
+          <p class="lead lead--wide">Больше 500 отзывов на Яндекс Картах. Гости пишут о просторных номерах, вкусных завтраках, удобном расположении и людях, которые помнят мелочи. Мы читаем каждый отзыв и отвечаем на него.</p>
+        </div>
+        <a href="#" class="btn btn--ghost">Все отзывы на Яндекс Картах</a>
+      </div>
+      <div class="reviews__grid">
+        <div class="reviews__score">
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <div class="reviews__num">0,0</div>
+          <p>Рейтинг из виджета Яндекс Карт</p>
+          <p>500+ отзывов</p>
+        </div>
+        <div class="reviews__widget"><span>Виджет отзывов Яндекс Карт</span></div>
+      </div>
     </div>
-    <div class="reviews__widget"><span>Виджет отзывов Яндекс Карт</span></div>
   </div>
 </section>
 
-<!-- ============ КОНТАКТЫ ============ -->
+<!-- ============ 09 КАРТА ============ -->
 <section class="sec contacts" id="contacts">
   <div class="wrap contacts__grid">
     <div class="contacts__map" aria-label="Карта">
@@ -388,37 +483,46 @@
       <span class="contacts__map-label">Карта</span>
     </div>
     <div class="contacts__info">
-      <p class="eyebrow">Как нас найти</p>
-      <h2>Ждём вас на Петроградской</h2>
-      <a href="tel:+78123465555" class="contacts__phone">+7 (812) 346-55-55</a>
-      <p class="contacts__addr">Санкт-Петербург, ул. Малая Разночинная, 11, стр. 1</p>
+      <p class="eyebrow">Как добраться</p>
+      <h2 class="contacts__title">Санкт-Петербург, ул. Малая Разночинная, 11, стр. 1</h2>
+      <p class="lead">Историческая часть Петроградской стороны: рядом набережная Невы, метро «Чкаловская» и главные спортивные арены города.</p>
       <ul class="list list--compact">
         <li><b>Метро</b><span>«Чкаловская» — 5–7 минут пешком</span></li>
-        <li><b>Парковка</b><span>Наземная и крытая, у входа</span></li>
-        <li><b>Пулково</b><span>25–45 минут на такси</span></li>
+        <li><b>Парковка</b><span>Наземная и крытая, у входа в отель</span></li>
+        <li><b>Трансфер и такси</b><span>Пулково — 25–45 минут, Московский вокзал — около 25 минут</span></li>
       </ul>
-      <div class="btns">
-        <a href="#" class="btn">Построить маршрут</a>
-        <a href="mailto:info@weltonhotel.ru" class="btn btn--ghost">info@weltonhotel.ru</a>
-      </div>
+      <a href="#" class="btn">Построить маршрут</a>
     </div>
   </div>
 </section>
 
-<!-- ============ ФОРМА ============ -->
+<!-- ============ 10 ФОРМА ЗАЯВКИ ============ -->
 <section class="sec ask">
   <div class="wrap">
     <form class="ask__box" onsubmit="return false">
       <div class="ask__text">
+        <p class="eyebrow">Мы на связи</p>
         <h2>Остались вопросы?</h2>
-        <p>Расскажите, что планируете, — подскажем номер, тариф или формат мероприятия. Звонки принимаем круглосуточно.</p>
+        <p class="lead">Расскажите, что планируете, — подскажем номер, тариф или формат мероприятия. Звонки принимаем круглосуточно.</p>
+        <ul class="ask__contacts">
+          <li><b>+7 (812) 346-55-55</b><span>Круглосуточно</span></li>
+          <li><b>info@weltonhotel.ru</b><span>Бронирование и общие вопросы</span></li>
+          <li><b>sales@weltonhotel.ru, доб. 2</b><span>Мероприятия и группы</span></li>
+        </ul>
       </div>
       <div class="ask__fields">
         <input type="text" placeholder="Имя" aria-label="Имя">
-        <input type="tel" placeholder="Телефон" aria-label="Телефон">
+        <input type="tel" placeholder="Телефон: +7 (___) ___-__-__" aria-label="Телефон">
+        <input type="email" placeholder="E-mail" aria-label="E-mail">
+        <label class="ask__select">
+          <span>Тема обращения</span>
+          <select aria-label="Тема обращения">
+            <option>Бронирование</option>
+          </select>
+        </label>
         <textarea placeholder="Сообщение" aria-label="Сообщение" rows="3"></textarea>
-        <label class="check"><input type="checkbox"><span>Согласен на обработку персональных данных</span></label>
-        <button class="btn">Отправить</button>
+        <label class="check"><input type="checkbox"><span>Я согласен на обработку персональных данных и с политикой конфиденциальности.</span></label>
+        <button class="btn">Отправить заявку</button>
       </div>
     </form>
   </div>
@@ -429,16 +533,18 @@
 <!-- ============ ФУТЕР ============ -->
 <footer class="ftr">
   <div class="wrap">
-    <p class="ftr__slogan">Ждём вас в Вэлтон</p>
+    <p class="ftr__slogan">Ждём вас в ВЭЛТОН.</p>
     <div class="ftr__grid">
       <div class="ftr__brand">
         <img src="../brand/WELTON_horizontal+descriptor_porcelain.svg" alt="ВЭЛТОН. Отель и апартаменты" class="ftr__logo">
-        <p>197110, Санкт-Петербург,<br>ул. Малая Разночинная, 11, стр. 1</p>
+        <p>ВЭЛТОН Отель и апартаменты на Петроградской стороне. Место, где задают хороший тон дню.</p>
+        <p>197110, Санкт-Петербург,<br>ул. Малая Разночинная, 11, строение 1</p>
         <a href="tel:+78123465555" class="ftr__phone">+7 (812) 346-55-55</a>
         <a href="mailto:info@weltonhotel.ru">info@weltonhotel.ru</a>
         <div class="ftr__soc">
           <a href="#">VK</a><a href="#">Telegram</a><a href="#">MAX</a>
         </div>
+        <p class="ftr__tags">#ВЭЛТОН · #ВЭЛТОНВсёБудетХорошо · #ХорошийТон · #СчастливыйЛист · #ПетроградскаяСторона</p>
       </div>
       <div class="ftr__col">
         <h4>Отель</h4>
@@ -447,20 +553,32 @@
         <a href="../apartments.html">Апартаменты надолго</a>
         <a href="../offers.html">Спецпредложения</a>
         <a href="../services.html">Услуги отеля</a>
+        <a href="../life.html">Жизнь отеля</a>
         <a href="../faq.html">Частые вопросы</a>
       </div>
       <div class="ftr__col">
         <h4>Отдых</h4>
-        <a href="../restaurant.html">Ресторан «Берёзки»</a>
         <a href="../spa.html">Бассейн и сауна</a>
+        <a href="../restaurant.html">Ресторан «Берёзки»</a>
+        <a href="../restaurant.html#breakfast">Завтраки</a>
         <a href="../kids.html">Детям</a>
         <a href="../pets.html">С питомцем</a>
-        <a href="../life.html">Жизнь отеля</a>
+      </div>
+      <div class="ftr__col">
+        <h4>Мероприятия</h4>
+        <a href="../events-business.html">Деловые</a>
+        <a href="../events-wedding.html">Свадебные</a>
+        <a href="../events-private.html">Частные</a>
+        <a href="../events.html">Банкетное меню</a>
+        <a href="../visa.html">Визовая поддержка</a>
       </div>
       <div class="ftr__col">
         <h4>Документы</h4>
-        <a href="../rules.html">Правила проживания</a>
         <a href="../loyalty.html">Программа лояльности</a>
+        <a href="../partners.html">Партнёры</a>
+        <a href="../rules.html">Правила проживания</a>
+        <a href="../kids.html#rules">Детская политика</a>
+        <a href="../pets.html">Правила для гостей с питомцами</a>
         <a href="../privacy.html">Политика конфиденциальности</a>
         <a href="../offer.html">Публичная оферта</a>
       </div>

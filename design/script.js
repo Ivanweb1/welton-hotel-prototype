@@ -23,7 +23,22 @@
   burger.addEventListener('click', function () { setMenu(!hdr.classList.contains('is-open')); });
   hdr.querySelectorAll('.menu a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
-  window.addEventListener('resize', function () { if (window.innerWidth > 1080) setMenu(false); });
+  window.addEventListener('resize', function () { if (window.innerWidth > 1300) setMenu(false); });
+
+  // фильтр спецпредложений
+  var tagBtns = document.querySelectorAll('.tagbtn');
+  tagBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      tagBtns.forEach(function (b) { b.classList.toggle('is-on', b === btn); });
+      var f = btn.dataset.filter;
+      var offers = document.querySelectorAll('.offer');
+      var any = Array.prototype.some.call(offers, function (o) { return o.dataset.cat === f; });
+      // для категории без карточек (пока «Командировки») показываем все
+      offers.forEach(function (o) {
+        o.classList.toggle('is-hidden', f !== 'all' && any && o.dataset.cat !== f);
+      });
+    });
+  });
 
   // стрелки у лент
   document.querySelectorAll('[data-scroll]').forEach(function (btn) {
