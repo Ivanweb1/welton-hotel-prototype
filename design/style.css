@@ -2119,3 +2119,17 @@ a:hover > .soc-ic .soc-ic__line, a:focus-visible > .soc-ic .soc-ic__line { strok
 /* горизонтальные ленты — без вертикальной прокрутки */
 .track { overflow-y: hidden; overscroll-behavior-x: contain; }
 .gr-track { padding-top: 4px; padding-bottom: 12px; }
+
+/* ресторан: экран пополам — фото от левого края до центра, справа текст */
+.dine__grid {
+  width: auto; max-width: none; margin: 0 calc(50% - 50vw); padding: 0 !important;
+  grid-template-columns: 1fr 1fr; column-gap: 0; min-height: 760px;
+}
+.dine__main img { min-height: 760px; border-radius: 0 !important; }
+.dine__text { padding: 72px max(var(--gutter), calc((100vw - var(--wrap)) / 2)) 72px 72px; }
+.dine__text > * { max-width: 560px; }
+@media (max-width: 1080px) {
+  .dine__grid { grid-template-columns: 1fr; min-height: 0; }
+  .dine__main img { min-height: 0; aspect-ratio: 4 / 3; }
+  .dine__text { padding: 40px var(--gutter) 0; }
+}
