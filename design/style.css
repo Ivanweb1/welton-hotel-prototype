@@ -2164,3 +2164,8 @@ a:hover > .soc-ic .soc-ic__line, a:focus-visible > .soc-ic .soc-ic__line { strok
   .dine__main img { border-radius: var(--r-card) !important; aspect-ratio: 4 / 3.4; }
   .dine__text { padding: 32px 0 0; }
 }
+/* ресторан: слайдер фото слева */
+.dine__main.slider { position: relative; overflow: hidden; border-radius: var(--r-card); aspect-ratio: 1 / 1.05; background: var(--porcelain); }
+.dine__main.slider .slide { position: absolute !important; inset: 0; width: 100%; height: 100% !important; aspect-ratio: auto !important; object-fit: cover; border-radius: 0 !important; }
+.dine__main .slider__dots { left: 50%; bottom: 18px; transform: translateX(-50%); padding: 6px 10px; border-radius: 12px; background: rgba(27, 28, 27, .22); backdrop-filter: blur(4px); }
+@media (max-width: 1080px) { .dine__main.slider { aspect-ratio: 4 / 3.4; } }
