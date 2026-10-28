@@ -1651,3 +1651,20 @@ html, body { overflow-x: clip; }
 }
 /* галерея спа: на узких экранах держим объект (правую часть кадра) в кадре */
 @media (max-width: 1080px) { .tonus__media .slide { object-position: 72% center; } }
+
+/* спецпредложения: «Все предложения» в строке с табами, по линии описания */
+@media (min-width: 1081px) {
+  .offers__bar { display: grid; grid-template-columns: 1fr 1fr; column-gap: 20px; align-items: center; }
+  .offers__bar > .link--head { justify-self: start; }
+}
+
+/* бассейн и спа: список минимально — без иконок и линий, 2 колонки, только текст */
+.tonus__text .list { grid-template-columns: 1fr 1fr; gap: 20px 28px; margin: 28px 0 32px; }
+.tonus__text .list li:has(.ico) {
+  display: block; padding: 0 !important; border: 0 !important;
+}
+.tonus__text .list li:has(.ico):last-child { border: 0 !important; }
+.tonus__text .list li:has(.ico) .ico { display: none; }
+.tonus__text .list li:has(.ico) b { display: block; margin-bottom: 3px; font-size: 15px; font-weight: 600; color: var(--teal-dark); white-space: normal; }
+.tonus__text .list li:has(.ico) span:not(.ico) { display: block; font-size: 13px; line-height: 1.45; }
+@media (max-width: 720px) { .tonus__text .list { grid-template-columns: 1fr 1fr; gap: 16px 18px; } }
