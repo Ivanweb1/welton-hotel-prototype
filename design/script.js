@@ -165,3 +165,25 @@ document.querySelectorAll('.gr__more').forEach(function (btn) {
     btn.textContent = open ? 'Свернуть' : 'Читать полностью';
   });
 });
+
+/* карта в контактах: на широком экране сдвигаем центр, чтобы метка была справа от плашки; серая, пока с ней не взаимодействуют */
+(function () {
+  var box = document.querySelector('.contacts__map'); if (!box) return;
+  var fr = box.querySelector('iframe');
+  var lon = parseFloat(box.dataset.lon), lat = parseFloat(box.dataset.lat);
+  function src() {
+    var w = window.innerWidth, z = 16, shift = 0;
+    if (w > 1080) shift = Math.min(w * 0.22, 360);              // метка правее центра, плашка слева
+    var deg = 360 / (256 * Math.pow(2, z));                        // градусов долготы на пиксель
+    var cLon = (lon - shift * deg).toFixed(6);
+    return 'https://yandex.ru/map-widget/v1/?ll=' + cLon + '%2C' + lat + '&z=' + z +
+      '&pt=' + lon + '%2C' + lat + '%2Cpm2rdm&lang=ru_RU';
+  }
+  var last = '';
+  function set() { var u = src(); if (u !== last) { fr.src = u; last = u; } }
+  set();
+  var t; window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(set, 300); });
+  box.addEventListener('pointerdown', function () { box.classList.add('is-active'); });
+  box.addEventListener('mouseleave', function () { box.classList.remove('is-active'); });
+  document.addEventListener('pointerdown', function (e) { if (!box.contains(e.target)) box.classList.remove('is-active'); });
+})();

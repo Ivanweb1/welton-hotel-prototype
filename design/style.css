@@ -1934,3 +1934,54 @@ a:hover > .soc-ic .soc-ic__line, a:focus-visible > .soc-ic .soc-ic__line { strok
   .rsum__aspects { justify-content: flex-start; padding: 14px 0 0; border-left: 0; border-top: 1px solid var(--line); }
 }
 @media (max-width: 720px) { .rsum { padding: 18px 20px; } .rsum__aspects { gap: 8px 16px; } }
+
+/* ================================================================
+   Контакты — карта на всю ширину, текст на плашке (как блок бассейна)
+   ================================================================ */
+.contacts__grid {
+  position: relative; display: flex; align-items: center;
+  width: auto; max-width: none; min-height: 680px;
+  margin: 0 calc(50% - 50vw);
+  padding: 72px max(var(--gutter), calc((100vw - var(--wrap)) / 2)) !important;
+  border-radius: 0 !important; gap: 0;
+}
+.contacts__map {
+  position: absolute !important; inset: 0; z-index: 0; min-height: 0;
+  border-radius: 0 !important; background: #e9e6df;
+}
+.contacts__map iframe {
+  position: absolute; inset: 0; width: 100%; height: 100%; border: 0;
+  filter: grayscale(1) contrast(.92) brightness(1.04);
+  transition: filter .5s ease;
+}
+.contacts__map:hover iframe, .contacts__map.is-active iframe, .contacts__map:focus-within iframe { filter: none; }
+.contacts__open {
+  position: absolute; z-index: 2; right: max(var(--gutter), calc((100vw - var(--wrap)) / 2)); bottom: 28px; left: auto; top: auto;
+}
+.contacts__info {
+  position: relative; z-index: 1; pointer-events: auto;
+  width: 600px; max-width: 100%; padding: 52px;
+  border-radius: var(--r-card); background: var(--porcelain-pale);
+  box-shadow: 0 30px 60px -30px rgba(15, 40, 42, .4);
+}
+.contacts__info > :first-child { margin-top: 0; }
+.contacts__info > :last-child { margin-bottom: 0; }
+.contacts__title { font-size: clamp(26px, 2.3vw, 34px); line-height: 1.15; }
+.contacts__info .lead { font-size: 15px; margin-top: 16px; }
+.contacts__info .list--compact { margin: 24px 0 28px; gap: 14px; }
+.contacts__info .list--compact li:has(.ico) { grid-template-columns: 36px 1fr; column-gap: 14px; row-gap: 0; align-items: center; }
+.contacts__info .list--compact li:has(.ico) .ico { grid-row: span 2; width: 36px; height: 36px; }
+.contacts__info .list--compact li:has(.ico) .ico svg { width: 18px; height: 18px; }
+.contacts__info .list--compact li:has(.ico) b { font-size: 15px; font-weight: 600; color: var(--teal-dark); }
+.contacts__info .list--compact li:has(.ico) span:not(.ico) { font-size: 13px; color: var(--muted); line-height: 1.4; }
+@media (max-width: 1080px) {
+  .contacts__grid { display: flex; flex-direction: column; align-items: stretch; min-height: 0; padding: 0 !important; }
+  .contacts__map { position: relative !important; inset: auto; height: 420px; order: -1; }
+  .contacts__open { right: var(--gutter); bottom: 60px; }
+  .contacts__info { width: auto; margin: -40px var(--gutter) 0; padding: 32px; }
+}
+@media (max-width: 720px) {
+  .contacts__map { height: 320px; }
+  .contacts__info { margin: -32px 12px 0; padding: 24px; }
+}
+.rsum { display: inline-grid; grid-template-columns: auto; }
