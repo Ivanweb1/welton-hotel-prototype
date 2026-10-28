@@ -1507,7 +1507,7 @@ html, body { overflow-x: clip; }
 .room__img { border-radius: var(--r-card); }
 
 /* детское фото — ниже, чтобы плашка не закрывала голову */
-#kids .family__img img { object-position: center 15%; }
+#kids .family__img img { object-position: center 30%; }
 
 /* условия тарифов — значок «i» с подсказкой при наведении */
 .offers__info {
