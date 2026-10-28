@@ -1803,3 +1803,12 @@ html, body { overflow-x: clip; }
 .life .sec__ctl { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 .socials--head { margin: 0 0 0 14px; padding-left: 24px; border-left: 1px solid var(--line); gap: 8px; }
 @media (max-width: 720px) { .socials--head { margin: 6px 0 0; padding-left: 0; border-left: 0; width: 100%; } }
+
+/* соцсети: слева под заголовком, в одной строке со стрелками */
+.socials--head { margin: 0; padding: 0; border: 0; }
+@media (min-width: 1081px) {
+  .life .sec__head h2 { grid-row: 1; }
+  .life .sec__head .socials--head { grid-column: 1 !important; grid-row: 2 !important; align-self: center; justify-self: start; }
+  .life .sec__head .sec__ctl { grid-column: 2; grid-row: 2; }
+}
+@media (max-width: 1080px) { .life .sec__head .socials--head { grid-column: 1; grid-row: auto; } }
