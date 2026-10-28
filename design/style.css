@@ -1899,3 +1899,17 @@ html, body { overflow-x: clip; }
 .soc-logo { width: 18px; height: 18px; flex-shrink: 0; border-radius: 5px; display: block; }
 .soc-logo--site { display: grid; place-items: center; background: rgba(39, 96, 101, .1); color: var(--teal); }
 .socials a .soc-logo--site svg { width: 13px; height: 13px; }
+
+/* иконки соцсетей: круглые, по умолчанию бирюзовые, при наведении — фирменный цвет */
+.soc-ic { width: 22px; height: 22px; flex-shrink: 0; display: block; }
+.soc-ic__bg { fill: rgba(39, 96, 101, .1); transition: fill .25s; }
+.soc-ic__g { fill: var(--teal); transition: fill .25s; }
+.soc-ic__line { stroke: var(--teal); transition: stroke .25s; }
+a:hover > .soc-ic .soc-ic__bg, a:focus-visible > .soc-ic .soc-ic__bg { fill: var(--brand, var(--teal)); }
+a:hover > .soc-ic .soc-ic__g, a:focus-visible > .soc-ic .soc-ic__g { fill: #fff; }
+a:hover > .soc-ic .soc-ic__line, a:focus-visible > .soc-ic .soc-ic__line { stroke: #fff; }
+.socials a:hover { background: transparent; border-color: rgba(39, 96, 101, .45); color: var(--teal-dark); }
+/* в тёмном подвале */
+.ftr__soc .soc-ic__bg { fill: rgba(249, 246, 240, .14); }
+.ftr__soc .soc-ic__g { fill: var(--porcelain-pale); }
+.gr__photos { margin-top: auto; padding-top: 4px; }
