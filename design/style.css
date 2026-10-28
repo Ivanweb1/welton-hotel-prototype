@@ -2148,3 +2148,19 @@ a:hover > .soc-ic .soc-ic__line, a:focus-visible > .soc-ic .soc-ic__line { strok
 .dine__row { display: block; }
 .dine__body { display: block !important; }
 .dine__body p { max-width: 520px; }
+
+/* ресторан: фото в сетке, со скруглениями, почти квадратное; текст по центру */
+@media (min-width: 1081px) {
+  .dine__grid {
+    width: 100%; max-width: calc(var(--wrap) + var(--gutter) * 2); margin: 0 auto;
+    padding: 0 var(--gutter) !important; grid-template-columns: 1fr 1fr; column-gap: 72px; align-items: center;
+  }
+  .dine__main { position: static; }
+  .dine__main img { position: static; width: 100%; height: auto; aspect-ratio: 1 / 1.05; min-height: 0; object-position: center 35%; border-radius: var(--r-card) !important; }
+  .dine__text { padding: 0; }
+}
+@media (max-width: 1080px) {
+  .dine__grid { width: 100%; max-width: none; margin: 0; padding: 0 var(--gutter) !important; }
+  .dine__main img { border-radius: var(--r-card) !important; aspect-ratio: 4 / 3.4; }
+  .dine__text { padding: 32px 0 0; }
+}
