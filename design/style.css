@@ -1478,3 +1478,93 @@ html, body { overflow-x: clip; }
 .specs--ico { flex-wrap: nowrap; gap: 6px; }
 .specs--ico li { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px 5px 8px; font-size: 12.5px; white-space: nowrap; color: var(--teal-dark); }
 .specs--ico li svg { flex-shrink: 0; color: var(--apricot); }
+
+/* ================================================================
+   Правки: плашки преимуществ, ссылки, блок апартаментов, выравнивание
+   ================================================================ */
+
+/* быстрые ссылки — светлая плашка с тонкой рамкой, иконка в бирюзовом круге */
+.pane, .pane:hover {
+  background: #FCFAF5;
+  box-shadow: inset 0 0 0 1px rgba(39, 96, 101, .1);
+}
+.pane__art, .pane:hover .pane__art {
+  width: 48px; height: 48px;
+  background: var(--teal); color: var(--porcelain-pale);
+  box-shadow: 0 8px 18px -10px rgba(15, 80, 85, .55);
+}
+.pane__art svg { width: 24px; height: 24px; }
+.pane__art .acc { stroke: var(--apricot); }
+.pane__art .acc--fill { fill: var(--apricot); }
+
+/* карточки: текст по одной линии с фото и сеткой страницы */
+.room__body, .event__body { padding: 20px 0 0; }
+.family__body { padding: 22px 0 0; }
+.leaf h3, .leaf p { padding: 0; }
+
+/* круг «Подробнее» не обрезается скруглением карточки */
+.room { overflow: visible; }
+.room__img { border-radius: var(--r-card); }
+
+/* детское фото — ниже, чтобы плашка не закрывала голову */
+#kids .family__img img { object-position: center 15%; }
+
+/* условия тарифов — значок «i» с подсказкой при наведении */
+.offers__info {
+  position: relative; display: inline-grid; place-items: center;
+  width: 32px; height: 32px; border-radius: 50%;
+  color: var(--teal); cursor: help; outline: none;
+  transition: background .2s, color .2s;
+}
+.offers__info:hover, .offers__info:focus-visible { background: var(--teal); color: var(--porcelain-pale); }
+.offers__tip {
+  position: absolute; right: 0; bottom: calc(100% + 10px); z-index: 5;
+  width: max-content; max-width: 260px; padding: 10px 14px;
+  border-radius: 12px; background: var(--teal-dark); color: var(--porcelain-pale);
+  font-size: 13px; line-height: 1.4; text-align: left;
+  box-shadow: 0 12px 30px -12px rgba(15, 80, 85, .5);
+  opacity: 0; transform: translateY(4px); pointer-events: none;
+  transition: opacity .2s, transform .2s;
+}
+.offers__tip::after {
+  content: ''; position: absolute; right: 11px; top: 100%;
+  border: 5px solid transparent; border-top-color: var(--teal-dark);
+}
+.offers__info:hover .offers__tip, .offers__info:focus-visible .offers__tip { opacity: 1; transform: none; }
+.offers__right { gap: 12px; }
+@media (max-width: 720px) { .offers__tip { right: auto; left: 0; } .offers__tip::after { right: auto; left: 11px; } }
+
+/* «Апартаменты для длительного проживания» — карточка в сетке: текст на бирюзе + фото */
+.stay {
+  display: grid; grid-template-columns: 1fr 1.1fr; align-items: stretch;
+  width: auto; min-height: 0;
+  margin: 96px 0 0 !important;
+  border-radius: 32px !important; overflow: hidden;
+  background: var(--teal-dark);
+}
+.stay::after, .stay__mark { display: none; }
+.stay__text {
+  max-width: none; margin: 0; padding: 64px 56px;
+  justify-content: center; gap: 18px;
+}
+.stay__text > * { max-width: 460px; }
+.stay__text h3 { font-size: clamp(28px, 2.6vw, 38px); line-height: 1.15; }
+.stay__nights { display: flex; gap: 0; margin: 10px 0 6px; }
+.stay__nights li {
+  display: grid; justify-items: start; gap: 4px; min-width: 0;
+  padding: 0 28px; border: 0; border-radius: 0;
+  border-left: 1px solid rgba(249, 246, 240, .2);
+}
+.stay__nights li:first-child { padding-left: 0; border-left: 0; }
+.stay__nights b { font-size: 44px; color: var(--porcelain-pale); }
+.stay__nights span { font-size: 13px; color: rgba(249, 246, 240, .65); }
+.stay__img { position: relative; inset: auto; min-height: 460px; margin: 12px 12px 12px 0 !important; }
+.stay__img img { position: absolute; inset: 0; border-radius: 22px !important; }
+@media (max-width: 900px) {
+  .stay { grid-template-columns: 1fr; margin-top: 72px !important; border-radius: 24px !important; }
+  .stay__img { order: -1; min-height: 240px; margin: 10px 10px 0 !important; }
+  .stay__img img { border-radius: 16px !important; }
+  .stay__text { padding: 28px 22px 32px; }
+  .stay__nights li { padding: 0 20px; }
+  .stay__nights b { font-size: 36px; }
+}
