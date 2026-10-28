@@ -2109,3 +2109,8 @@ a:hover > .soc-ic .soc-ic__line, a:focus-visible > .soc-ic .soc-ic__line { strok
 .qa__check input:checked::after { width: 8px; height: 4px; border-width: 1.5px; }
 .qa__check a { color: inherit; text-decoration: underline; text-decoration-color: rgba(39, 96, 101, .35); text-underline-offset: 3px; transition: color .2s, text-decoration-color .2s; }
 .qa__check a:hover { color: var(--teal); text-decoration-color: currentColor; }
+/* форма: кнопка слева, согласие справа от неё */
+@media (min-width: 721px) {
+  .qa__foot { justify-content: flex-start; gap: 24px; }
+  .qa__foot .btn { order: -1; }
+}
