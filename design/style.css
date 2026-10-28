@@ -2237,3 +2237,4 @@ a:hover > .soc-ic .soc-ic__line, a:focus-visible > .soc-ic .soc-ic__line { strok
 }
 #contacts { padding-bottom: 96px; }
 @media (max-width: 720px) { #contacts { padding-bottom: 56px; } }
+.qa__contacts small { white-space: nowrap; }
