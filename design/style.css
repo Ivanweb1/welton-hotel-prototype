@@ -1490,12 +1490,11 @@ html, body { overflow-x: clip; }
 }
 .pane__art, .pane:hover .pane__art {
   width: 48px; height: 48px;
-  background: var(--teal); color: var(--porcelain-pale);
-  box-shadow: 0 8px 18px -10px rgba(15, 80, 85, .55);
+  background: var(--porcelain-light); color: var(--teal);
+  box-shadow: inset 0 0 0 1px rgba(39, 96, 101, .12);
 }
 .pane__art svg { width: 24px; height: 24px; }
-.pane__art .acc { stroke: var(--apricot); }
-.pane__art .acc--fill { fill: var(--apricot); }
+.pane__art svg * { stroke-width: 1.5; }
 
 /* карточки: текст по одной линии с фото и сеткой страницы */
 .room__body, .event__body { padding: 20px 0 0; }
