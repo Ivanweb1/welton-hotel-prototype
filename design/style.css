@@ -1675,3 +1675,32 @@ html, body { overflow-x: clip; }
 .event__img .specs { position: absolute; left: 14px; right: 14px; top: 14px; z-index: 1; }
 .event__img .specs li { padding: 5px 12px; background: rgba(249, 246, 240, .92); backdrop-filter: blur(6px); color: var(--teal-dark); font-size: 12.5px; }
 .event { overflow: visible; }
+
+/* бассейн и спа: лёгкие иконки без фона слева от текста */
+.tonus__text .list li:has(.ico) { display: grid !important; grid-template-columns: 22px 1fr; column-gap: 12px; align-items: start; }
+.tonus__text .list li:has(.ico) .ico {
+  display: block; grid-row: span 2; width: 22px; height: 22px; margin-top: 1px;
+  background: none !important; color: var(--apricot); border-radius: 0 !important;
+}
+.tonus__text .list li:has(.ico) .ico svg { width: 22px; height: 22px; stroke-width: 1.5; }
+
+/* ================================================================
+   Единый стиль иконок: тонкая бирюзовая линия в мягком круге
+   (как на плашках под первым экраном)
+   ================================================================ */
+.ico, .ico--lg, .ico--sm, .list li:has(.ico) .ico {
+  border-radius: 50% !important;
+  background: rgba(39, 96, 101, .06) !important;
+  color: var(--teal) !important;
+}
+.ico svg, .list li:has(.ico) .ico svg { stroke-width: 1.5; }
+.specs--ico li svg { color: var(--teal); }
+
+/* бассейн и спа: такие же круги, только компактнее */
+.tonus__text .list li:has(.ico) { grid-template-columns: 36px 1fr; column-gap: 14px; }
+.tonus__text .list li:has(.ico) .ico {
+  display: grid; place-items: center; width: 36px; height: 36px; margin-top: 0;
+}
+.tonus__text .list li:has(.ico) .ico svg { width: 18px; height: 18px; }
+.tonus__text .list li:has(.ico) b { margin-top: 1px; }
+.tonus__text .list li:has(.ico) .ico { background: rgba(39, 96, 101, .06) !important; color: var(--teal) !important; border-radius: 50% !important; }
