@@ -1913,3 +1913,24 @@ a:hover > .soc-ic .soc-ic__line, a:focus-visible > .soc-ic .soc-ic__line { strok
 .ftr__soc .soc-ic__bg { fill: rgba(249, 246, 240, .14); }
 .ftr__soc .soc-ic__g { fill: var(--porcelain-pale); }
 .gr__photos { margin-top: auto; padding-top: 4px; }
+
+/* сводка отзывов — компактно, в одну строку */
+.rsum { grid-template-columns: auto 1fr; gap: 16px 36px; margin-bottom: 24px; padding: 18px 28px; }
+.rsum__score { gap: 14px; }
+.rsum__num { font-size: 52px; line-height: .9; }
+.rsum__info { display: grid; gap: 2px; }
+.rsum__stars { font-size: 13px; letter-spacing: 2px; line-height: 1.2; }
+.rsum__meta { margin: 0; font-size: 12.5px; }
+.rsum__award { margin: 0; padding: 0; background: none; font-size: 12.5px; color: var(--teal-dark); }
+.rsum__award::before { content: '★ '; }
+.rsum__aspects {
+  display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 22px;
+  padding: 0 0 0 36px; border-left: 1px solid var(--line);
+}
+.rsum__aspects li { display: inline-flex; gap: 6px; align-items: baseline; font-size: 13px; white-space: nowrap; }
+.rsum__aspects b { font-weight: 600; }
+@media (max-width: 1080px) {
+  .rsum { grid-template-columns: 1fr; }
+  .rsum__aspects { justify-content: flex-start; padding: 14px 0 0; border-left: 0; border-top: 1px solid var(--line); }
+}
+@media (max-width: 720px) { .rsum { padding: 18px 20px; } .rsum__aspects { gap: 8px 16px; } }
