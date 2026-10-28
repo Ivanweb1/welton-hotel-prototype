@@ -90,7 +90,7 @@
 (function () {
   if (!('IntersectionObserver' in window)) return;
   document.documentElement.classList.add('js-reveal');
-  var sel = '.sec__head, .leaf, .room, .stay__text, .family__card, .offers__bar, .offer, .tonus__text, .tonus__media, .taste__media, .taste__text, .event, .manager, .reel, .reviews__score, .rev, .contacts__map, .contacts__info, .ask__box, .pane, .ftr__slogan';
+  var sel = '.sec__head, .leaf, .room, .stay__text, .family__card, .offers__bar, .offer, .tonus__text, .tonus__media, .taste__media, .taste__text, .dine__main, .dine__text, .event, .manager, .reel, .reviews__score, .rev, .contacts__map, .contacts__info, .ask__box, .pane, .ftr__slogan';
   var els = document.querySelectorAll(sel);
   els.forEach(function (el) {
     el.setAttribute('data-rv', '');
@@ -130,4 +130,29 @@
 (function () {
   var v = (location.search.match(/hero=([abcd])/) || [])[1];
   if (v) document.documentElement.classList.add('hv-' + v);
+})();
+
+/* пометки на фото мероприятий — в одну строку, лишнее сворачиваем в «+N» */
+(function () {
+  function fit() {
+    document.querySelectorAll('.event__img .specs').forEach(function (ul) {
+      var old = ul.querySelector('.specs__more'); if (old) old.remove();
+      var items = Array.prototype.slice.call(ul.children);
+      items.forEach(function (li) { li.hidden = false; });
+      if (!items.length) return;
+      var top = items[0].offsetTop;
+      var wraps = function () { return Array.prototype.some.call(ul.children, function (li) { return !li.hidden && li.offsetTop > top; }); };
+      if (!wraps()) return;
+      var more = document.createElement('li'); more.className = 'specs__more'; ul.appendChild(more);
+      var hidden = [];
+      for (var i = items.length - 1; i > 0 && wraps(); i--) {
+        items[i].hidden = true; hidden.unshift(items[i].textContent);
+        more.textContent = '+' + hidden.length;
+      }
+      more.title = hidden.join(', ');
+    });
+  }
+  window.addEventListener('load', fit);
+  window.addEventListener('resize', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
 })();

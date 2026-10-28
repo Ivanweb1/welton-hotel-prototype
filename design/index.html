@@ -372,26 +372,34 @@
 </section>
 
 <!-- ============ 05 РЕСТОРАН ============ -->
-<section class="sec taste" id="rest">
-  <div class="wrap taste__grid">
-    <div class="taste__media">
-      <img src="../assets/photos/gen/restaurant.jpg" alt="Ужин в ресторане «Берёзки»" class="taste__img taste__img--main" loading="lazy">
-      <img src="../assets/photos/gen/breakfast.jpg" alt="Завтрак" class="taste__img taste__img--sub" loading="lazy">
-      <span class="taste__stamp">24<small>часа</small></span>
-    </div>
-    <div class="taste__text">
+<section class="sec dine" id="rest">
+  <div class="wrap dine__grid">
+    <figure class="dine__main">
+      <img src="../assets/photos/gen/restaurant.jpg" alt="Ужин при свечах в ресторане «Берёзки»" loading="lazy">
+    </figure>
+    <div class="dine__text">
+      <p class="dine__eyebrow">Ресторан · Петроградская сторона</p>
       <h2>Ресторан «Берёзки»</h2>
-      <p class="lead">Ресторан отеля ВЭЛТОН работает круглосуточно и открыт для соседей по Петроградской. Завтрак, после которого хочется действовать, деловой обед и ужин в честь удачного дня. Вечером — бар, авторские сеты бренд-шефа и живой звук старинного рояля в лобби.</p>
-      <ul class="list">
-        <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11M9 8h6"/></svg></span><b>Меню</b><span>Основное и детское меню, барная карта, «Клеверное меню»</span></li>
-        <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16M8 3c-.8 1 .8 2 0 3M12 3c-.8 1 .8 2 0 3"/></svg></span><b>Завтраки</b><span>Каждое утро, включены в проживание</span></li>
-        <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span><b>Часы работы</b><span>Ресторан — 24 часа, бар и рум-сервис</span></li>
-        <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h4l-.5 6a1.5 1.5 0 0 1-3 0zM13 3h4l-.5 6a1.5 1.5 0 0 1-3 0zM9 10.5V20M15 10.5V20M6.5 20h5M12.5 20h5"/></svg></span><b>Банкеты</b><span>Праздники в «Берёзках» — от 3 500 ₽ на гостя</span></li>
-      </ul>
-      <div class="btns">
-        <a href="../restaurant.html#booking" class="btn">Забронировать стол</a>
-        <a href="../restaurant.html#menu" class="btn btn--ghost">Смотреть меню</a>
+      <blockquote class="dine__quote">Завтрак, после которого хочется действовать</blockquote>
+      <div class="dine__row">
+        <figure class="dine__sub">
+          <img src="../assets/photos/gen/breakfast.jpg" alt="Сырники на завтрак" loading="lazy">
+          <figcaption>Сырники на завтрак</figcaption>
+        </figure>
+        <div class="dine__body">
+          <p>Ресторан отеля ВЭЛТОН работает круглосуточно и открыт для соседей по Петроградской. Деловой обед, ужин в&nbsp;честь удачного дня, а вечером — бар, авторские сеты бренд-шефа и живой звук старинного рояля в&nbsp;лобби.</p>
+          <div class="btns">
+            <a href="../restaurant.html#booking" class="btn">Забронировать стол</a>
+            <a href="../restaurant.html#menu" class="btn btn--ghost">Меню</a>
+          </div>
+        </div>
       </div>
+      <ul class="dine__facts">
+        <li><b>24/7</b><span>и рум-сервис</span></li>
+        <li><b>Бар</b><span>сеты шефа</span></li>
+        <li><b>Рояль</b><span>живой звук</span></li>
+        <li><b>3 500 ₽</b><span>банкет, от</span></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -412,7 +420,7 @@
         <div class="event__body">
           <h3>Деловые и корпоративные</h3>
           <p>Конференции, тренинги, переговоры и стратегические сессии. Кофе-брейки минута в минуту, участники живут в том же здании.</p>
-          <div class="event__foot"><span>Рассадки · оборудование · кофе-брейки</span><a href="../events-business.html" class="link">Подробнее</a></div>
+          <div class="event__foot"><span class="offer__meta"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16M8 3c-.8 1 .8 2 0 3M12 3c-.8 1 .8 2 0 3"/></svg>Кофе-брейки</span><a href="../events-business.html" class="link">Подробнее</a></div>
         </div>
       </article>
       <article class="event">
@@ -420,7 +428,7 @@
         <div class="event__body">
           <h3>Свадебные</h3>
           <p>Банкет в «Берёзках», номер для новобрачных и размещение гостей в одном месте. Вам — праздник, нам — все детали.</p>
-          <div class="event__foot"><span></span><a href="../events-wedding.html" class="link">Подробнее</a></div>
+          <div class="event__foot"><span class="offer__meta"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h4l-.5 6a1.5 1.5 0 0 1-3 0zM13 3h4l-.5 6a1.5 1.5 0 0 1-3 0zM9 10.5V20M15 10.5V20M6.5 20h5M12.5 20h5"/></svg>Банкет в «Берёзках»</span><a href="../events-wedding.html" class="link">Подробнее</a></div>
         </div>
       </article>
       <article class="event">
@@ -428,12 +436,13 @@
         <div class="event__body">
           <h3>Частные</h3>
           <p>Юбилеи, дни рождения, детские праздники и встречи друзей. Меню собираем под повод и число гостей.</p>
-          <div class="event__foot"><span></span><a href="../events-private.html" class="link">Подробнее</a></div>
+          <div class="event__foot"><span class="offer__meta"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11M9 8h6"/></svg>Меню под повод</span><a href="../events-private.html" class="link">Подробнее</a></div>
         </div>
       </article>
     </div>
     <div class="manager">
-      <div>
+      <span class="manager__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.7-2 2.5-5 2.5"/></svg></span>
+      <div class="manager__text">
         <h3>Менеджер мероприятий</h3>
         <p>Ваш персональный менеджер подберёт зал и рассадку, пришлёт смету, согласует меню и будет рядом в день мероприятия.</p>
       </div>
@@ -456,6 +465,12 @@
       <div class="sec__ctl">
         <button class="arrow" data-scroll="life-track" data-dir="-1" aria-label="Назад">←</button>
         <button class="arrow" data-scroll="life-track" data-dir="1" aria-label="Вперёд">→</button>
+        <div class="socials socials--head">
+          <a href="#" class="btn btn--ghost btn--sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.391 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C4.624 10.857 4.03 8.57 4.03 8.096c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.677.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.204.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.254-1.406 2.151-3.574 2.151-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.49-.085.744-.576.744z"/></svg><span>VK</span></a>
+          <a href="#" class="btn btn--ghost btn--sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg><span>Telegram</span></a>
+          <a href="#" class="btn btn--ghost btn--sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4.7 0 8.5 3.4 8.5 7.6s-3.8 7.6-8.5 7.6c-1 0-2-.1-2.9-.4L5 20.5l1-3.6c-1.6-1.4-2.5-3.5-2.5-5.8 0-4.2 3.8-7.6 8.5-7.6z"/></svg><span>MAX</span></a>
+          <a href="../life.html" class="btn btn--ghost btn--sm">Фотогалерея</a>
+        </div>
       </div>
     </div>
   </div>
@@ -465,14 +480,6 @@
     <a href="#" class="reel"><img src="../assets/photos/gen/pool.jpg" alt="Бассейн отеля" loading="lazy"><span class="reel__play" aria-label="Смотреть видео"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></a>
     <a href="#" class="reel"><img src="../assets/photos/gen/event-private.jpg" alt="Лобби отеля" loading="lazy"><span class="reel__play" aria-label="Смотреть видео"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></a>
     <a href="#" class="reel"><img src="../assets/photos/gen/room-apartments.jpg" alt="Утро в апартаментах" loading="lazy"><span class="reel__play" aria-label="Смотреть видео"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></a>
-  </div>
-  <div class="wrap">
-    <div class="socials">
-      <a href="#" class="btn btn--ghost btn--sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.391 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C4.624 10.857 4.03 8.57 4.03 8.096c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.677.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.204.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.254-1.406 2.151-3.574 2.151-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.49-.085.744-.576.744z"/></svg><span>VK</span></a>
-      <a href="#" class="btn btn--ghost btn--sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg><span>Telegram</span></a>
-      <a href="#" class="btn btn--ghost btn--sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4.7 0 8.5 3.4 8.5 7.6s-3.8 7.6-8.5 7.6c-1 0-2-.1-2.9-.4L5 20.5l1-3.6c-1.6-1.4-2.5-3.5-2.5-5.8 0-4.2 3.8-7.6 8.5-7.6z"/></svg><span>MAX</span></a>
-      <a href="../life.html" class="btn btn--ghost btn--sm">Фотогалерея</a>
-    </div>
   </div>
 </section>
 
