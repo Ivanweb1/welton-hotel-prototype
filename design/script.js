@@ -176,6 +176,8 @@ document.querySelectorAll('.gr__more').forEach(function (btn) {
     if (w > 1080) shift = Math.min(w * 0.22, 360);              // метка правее центра, плашка слева
     var deg = 360 / (256 * Math.pow(2, z));                        // градусов долготы на пиксель
     var cLon = (lon - shift * deg).toFixed(6);
+    var um = box.dataset.um;
+    if (um) return 'https://yandex.ru/map-widget/v1/?um=' + encodeURIComponent(um) + '&source=constructor&ll=' + cLon + '%2C' + lat + '&z=' + z;
     return 'https://yandex.ru/map-widget/v1/?ll=' + cLon + '%2C' + lat + '&z=' + z +
       '&pt=' + lon + '%2C' + lat + '%2Cpm2rdm&lang=ru_RU';
   }

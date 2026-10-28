@@ -2114,3 +2114,4 @@ a:hover > .soc-ic .soc-ic__line, a:focus-visible > .soc-ic .soc-ic__line { strok
   .qa__foot { justify-content: flex-start; gap: 24px; }
   .qa__foot .btn { order: -1; }
 }
+@media (min-width: 1200px) { .qa__check { white-space: nowrap; max-width: none; } }
