@@ -2279,3 +2279,4 @@ a:hover > .soc-ic .soc-ic__line, a:focus-visible > .soc-ic .soc-ic__line { strok
 .stay__img .slider__dots { left: auto; right: max(var(--gutter), calc((100vw - var(--wrap)) / 2)); bottom: 28px; transform: none; padding: 6px 10px; border-radius: 12px; background: rgba(27, 28, 27, .22); backdrop-filter: blur(4px); }
 @media (max-width: 1080px) { .stay__img .slider__dots { right: 16px; bottom: 72px; } .stay__img.slider .slide { object-position: center !important; } }
 @media (max-width: 720px) { .stay__img .slider__dots { bottom: 52px; } }
+@media (max-width: 1080px) { .stay__img.slider .slide[src*="21x9"] { object-position: 72% center !important; } }
