@@ -1709,3 +1709,9 @@ html, body { overflow-x: clip; }
 .tonus__text .list { column-gap: 20px; }
 .tonus__text .list li:has(.ico) span:not(.ico) { white-space: nowrap; }
 @media (max-width: 720px) { .tonus__text .list { grid-template-columns: 1fr; } }
+/* бассейн и спа: одинаковый отступ от края плашки до контента со всех сторон */
+.tonus__text { aspect-ratio: auto; padding: 52px; }
+.tonus__text > :first-child { margin-top: 0; }
+.tonus__text > :last-child, .tonus__text .btns { margin-bottom: 0; }
+@media (max-width: 1080px) { .tonus__text { padding: 32px; } }
+@media (max-width: 720px) { .tonus__text { padding: 24px; } }
