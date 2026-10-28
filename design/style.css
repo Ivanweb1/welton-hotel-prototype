@@ -2116,3 +2116,6 @@ a:hover > .soc-ic .soc-ic__line, a:focus-visible > .soc-ic .soc-ic__line { strok
 }
 @media (min-width: 1200px) { .qa__check { white-space: nowrap; max-width: none; } }
 #reviews .sec__head { margin-bottom: 28px; }
+/* горизонтальные ленты — без вертикальной прокрутки */
+.track { overflow-y: hidden; overscroll-behavior-x: contain; }
+.gr-track { padding-top: 4px; padding-bottom: 12px; }
