@@ -2102,3 +2102,10 @@ a:hover > .soc-ic .soc-ic__line, a:focus-visible > .soc-ic .soc-ic__line { strok
 @media (max-width: 720px) { .ftr__cta { padding-bottom: 32px; margin-bottom: 36px; } .ftr__cta .btn { width: 100%; } }
 /* форма: эмблема на фоне бледнее */
 .qa__mark { opacity: .045; }
+
+/* согласие в форме — аккуратнее */
+.qa__check { align-items: center; gap: 10px; max-width: 460px; font-size: 12.5px; line-height: 1.45; text-wrap: balance; }
+.qa__check input { width: 16px; height: 16px; margin: 0; border-radius: 4px; box-shadow: inset 0 0 0 1px rgba(39, 96, 101, .35); }
+.qa__check input:checked::after { width: 8px; height: 4px; border-width: 1.5px; }
+.qa__check a { color: inherit; text-decoration: underline; text-decoration-color: rgba(39, 96, 101, .35); text-underline-offset: 3px; transition: color .2s, text-decoration-color .2s; }
+.qa__check a:hover { color: var(--teal); text-decoration-color: currentColor; }
