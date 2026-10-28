@@ -90,7 +90,7 @@
 (function () {
   if (!('IntersectionObserver' in window)) return;
   document.documentElement.classList.add('js-reveal');
-  var sel = '.sec__head, .leaf, .room, .stay__text, .family__card, .offers__bar, .offer, .tonus__text, .tonus__media, .taste__media, .taste__text, .dine__main, .dine__text, .event, .manager, .reel, .reviews__score, .rev, .contacts__map, .contacts__info, .ask__box, .pane, .ftr__slogan';
+  var sel = '.sec__head, .leaf, .room, .stay__text, .family__card, .offers__bar, .offer, .tonus__text, .tonus__media, .taste__media, .taste__text, .dine__main, .dine__text, .event, .manager, .reel, .reviews__score, .rev, .rsum, .gr, .contacts__map, .contacts__info, .ask__box, .pane, .ftr__slogan';
   var els = document.querySelectorAll(sel);
   els.forEach(function (el) {
     el.setAttribute('data-rv', '');
@@ -156,3 +156,12 @@
   window.addEventListener('resize', fit);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
 })();
+
+/* отзывы: «Читать полностью» раскрывает текст на месте */
+document.querySelectorAll('.gr__more').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var t = btn.previousElementSibling;
+    var open = t.classList.toggle('is-open');
+    btn.textContent = open ? 'Свернуть' : 'Читать полностью';
+  });
+});
