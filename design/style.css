@@ -2224,3 +2224,16 @@ a:hover > .soc-ic .soc-ic__line, a:focus-visible > .soc-ic .soc-ic__line { strok
 @media (max-width: 720px) { .event__foot, .offer__foot { flex-wrap: wrap; row-gap: 10px; } }
 @media (max-width: 360px) { .event__foot .offer__meta { font-size: 12.5px; padding: 0 12px 0 10px; } }
 @media (max-width: 1080px) { .qa__box { grid-template-columns: 1fr; } }
+
+/* контакты: карта по сетке, со скруглениями; плашка слева поверх */
+@media (min-width: 1081px) {
+  .contacts__grid {
+    width: calc(100% - var(--gutter) * 2); max-width: var(--wrap); margin: 0 auto;
+    min-height: 600px; padding: 32px !important;
+    border-radius: var(--r-card) !important; overflow: hidden;
+  }
+  .contacts__info { width: 540px; padding: 44px; }
+  .contacts__open { right: 24px; bottom: 24px; }
+}
+#contacts { padding-bottom: 96px; }
+@media (max-width: 720px) { #contacts { padding-bottom: 56px; } }

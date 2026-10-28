@@ -173,7 +173,10 @@ document.querySelectorAll('.gr__more').forEach(function (btn) {
   var lon = parseFloat(box.dataset.lon), lat = parseFloat(box.dataset.lat);
   function src() {
     var w = window.innerWidth, z = 16, shift = 0;
-    if (w > 1080) shift = Math.min(w * 0.22, 360);              // метка правее центра, плашка слева
+    var info = document.querySelector('.contacts__info');
+    if (w > 1080 && info) {                                        // метка — по центру между плашкой и правым краем карты
+      shift = (info.getBoundingClientRect().right - box.getBoundingClientRect().left) / 2;
+    }
     var deg = 360 / (256 * Math.pow(2, z));                        // градусов долготы на пиксель
     var cLon = (lon - shift * deg).toFixed(6);
     var um = box.dataset.um;
