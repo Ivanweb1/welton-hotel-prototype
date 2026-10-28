@@ -2238,3 +2238,39 @@ a:hover > .soc-ic .soc-ic__line, a:focus-visible > .soc-ic .soc-ic__line { strok
 #contacts { padding-bottom: 96px; }
 @media (max-width: 720px) { #contacts { padding-bottom: 56px; } }
 .qa__contacts small { white-space: nowrap; }
+
+/* ===== Апартаменты надолго — как блок бассейна: фото на всю ширину, светлая плашка слева ===== */
+.stay {
+  position: relative; display: flex; align-items: center;
+  width: auto; min-height: 680px;
+  margin: 96px calc(50% - 50vw) 0 !important;
+  padding: 72px max(var(--gutter), calc((100vw - var(--wrap)) / 2));
+  border-radius: 0 !important; overflow: hidden; background: var(--teal-dark);
+  grid-template-columns: none;
+}
+.stay__img { position: absolute !important; inset: 0; margin: 0 !important; min-height: 0; }
+.stay__img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 0 !important; }
+.stay__text {
+  position: relative; z-index: 1;
+  width: 560px; max-width: 100%; margin: 0; padding: 52px;
+  border-radius: var(--r-card); background: var(--porcelain-pale); color: var(--text);
+  box-shadow: 0 30px 60px -30px rgba(15, 40, 42, .45);
+}
+.stay__text > * { max-width: none; }
+.stay__text h3 { color: var(--teal-dark); }
+.stay__text p { color: var(--muted); }
+.stay__nights li { border-left-color: var(--line); }
+.stay__nights b { color: var(--teal-dark); }
+.stay__nights span { color: var(--muted); }
+.stay__text .btn { background: var(--teal); color: var(--porcelain-pale); }
+.stay__text .btn:hover { background: var(--teal-dark); }
+@media (max-width: 1080px) {
+  .stay { flex-direction: column; align-items: stretch; min-height: 0; padding: 0; margin-top: 72px !important; }
+  .stay__img { position: relative !important; inset: auto; height: 420px; order: -1; }
+  .stay__text { width: auto; margin: -64px var(--gutter) 0; padding: 32px; }
+}
+@media (max-width: 720px) {
+  .stay__img { height: 300px; }
+  .stay__text { margin: -40px 12px 0; padding: 24px; }
+}
+@media (max-width: 1080px) { .stay { background: none; overflow: visible; } }
