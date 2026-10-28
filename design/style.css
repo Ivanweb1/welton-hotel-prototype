@@ -2003,3 +2003,12 @@ a:hover > .soc-ic .soc-ic__line, a:focus-visible > .soc-ic .soc-ic__line { strok
 .ymark__logo { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: rgba(249, 246, 240, .14); }
 .ymark__logo img { width: 18px; height: 18px; display: block; }
 .ymark b { font-family: var(--font); font-size: 14px; font-weight: 700; letter-spacing: .06em; }
+
+/* отзывы: плашка рейтинга — слева под заголовком, в одной строке со стрелками */
+.reviews .sec__head .rsum { margin: 0; justify-self: start; }
+@media (min-width: 1081px) {
+  .reviews .sec__head h2 { grid-row: 1; }
+  .reviews .sec__head .rsum { grid-column: 1 !important; grid-row: 2 !important; align-self: center; }
+  .reviews .sec__head .sec__ctl { grid-column: 2; grid-row: 2; align-self: center; }
+}
+@media (max-width: 1080px) { .reviews .sec__head .rsum { grid-column: 1; grid-row: auto; } }
