@@ -31,7 +31,7 @@ dark, gloomy, cold blue tones, harsh flash, oversaturated, HDR look, cartoon, CG
 | 6 | «Детям» и спецпредложение «Всей семьёй» | [bathroom-kid.png](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/bathroom-kid.png) | 4:5, 1200×1500 | `kids.jpg` |
 | 7 | «С питомцем» | исходника нет — на базе [room-bed.webp](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/room-bed.webp) | 4:5, 1200×1500 | `pets.jpg` |
 | 8 | Спецпредложение «Спортивный пакет» | [stadium.jpg](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/stadium.jpg) | 1:1, 1400×1400 | `sport.jpg` |
-| 9 | Бассейн, сауна и тренажёрный зал | [spa-pool.webp](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/spa-pool.webp) | 1:1, 1400×1400 | `pool.jpg` |
+| 9 | Бассейн, сауна и тренажёрный зал — галерея на всю ширину (3 кадра) | см. раздел «Галерея спа» ниже | 21:9, 2560×1100 | `pool.jpg`, `spa-sauna.jpg`, `spa-gym.jpg` |
 | 10 | Ресторан — большое фото | [dinner.png](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/dinner.png) | 4:5, 1200×1500 | `restaurant.jpg` |
 | 11 | Ресторан — малое фото | [breakfast-in-bed.jpg](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/breakfast-in-bed.jpg) | 3:4, 1200×1600 | `breakfast.jpg` |
 | 12 | Мероприятия — «Деловые» | [conference.webp](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/conference.webp) | 5:4, 1500×1200 | `event-business.jpg` |
@@ -82,10 +82,7 @@ The same hotel room as in the reference: neatly made double bed with white linen
 Football stadium with a green pitch under the open roof, evening match atmosphere, warm stadium lights, deep blue sky at golden hour. Festive, energetic but warm color grading, no visible logos or brand names.
 ```
 
-**9. pool.jpg — бассейн**
-```
-Indoor hotel swimming pool with chrome handrails in the foreground, turquoise water, wooden wall panels, a large seascape wall mural and soft ceiling spotlights. Calm, clean, relaxing spa atmosphere, warm light, inviting water. Square composition, pool and handrails centered.
-```
+**9. Галерея спа** — промпты в разделе «Галерея спа» ниже.
 
 **10. restaurant.jpg — ресторан, большое**
 ```
@@ -161,4 +158,51 @@ A hand holding a small cream-colored card with an embossed four-leaf clover at a
 **5. reel-pool.jpg**
 ```
 Indoor hotel swimming pool in the early morning, calm turquoise water with soft reflections, chrome handrails in the foreground, wooden wall panels and a seascape mural, a folded white towel on a lounger, fresh and serene atmosphere.
+```
+
+
+## Галерея спа: бассейн, сауна, тренажёрный зал
+
+Блок «Бассейн, сауна и тренажёрный зал» — слайдер на всю ширину экрана, слева поверх фото лежит светлая плашка с текстом.
+
+**Формат:** 21:9, 2560×1100, JPG 85–90. Все три кадра в одном формате, чтобы слайды не прыгали.
+
+**Композиция (важно для всех трёх):**
+- левые ~45% кадра закрыты плашкой с текстом — там спокойный фон без важных деталей (стена, панели, мягкий свет);
+- главный объект (вода с поручнями, полок с ведром, тренажёры) — в правой половине, примерно 55–85% ширины;
+- на телефоне кадр обрезается почти до квадрата со сдвигом вправо — объект должен читаться и в узком кропе;
+- нижние ~10% справа — без мелких деталей (там точки слайдера);
+- камера на уровне глаз, ровные вертикали, широкий угол 24–28 мм.
+
+Добавлять в конец каждого промпта:
+
+```
+Ultra-wide 21:9 cinematic composition. Main subject placed in the right half of the frame; the left 45% is calm, uncluttered background (plain wall or soft wood panels, gentle light) reserved for a text card overlay. Eye-level camera, straight verticals, 24mm lens. Keep the exact same room, materials and equipment as the reference photo — this is a real hotel spa, do not invent or remove objects. Warm, soft, premium and light atmosphere, cream and honey wood tones, gentle shadows, no harsh contrast, editorial hotel photography, high resolution, realistic, no people, no text, no watermark, no logos.
+```
+
+Негативный промпт:
+
+```
+dark, gloomy, cold blue cast, neon, harsh flash, HDR look, oversaturated orange, cluttered left side, subject in the center or on the left, tilted verticals, fisheye distortion, extra equipment, people, text, watermark, logos
+```
+
+| Кадр | Референс | Сохранить как |
+|---|---|---|
+| Бассейн | [spa-pool.webp](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/spa-pool.webp) | `pool.jpg` |
+| Сауна | [gen/spa-sauna.jpg](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/gen/spa-sauna.jpg) | `spa-sauna.jpg` |
+| Тренажёрный зал | [gen/spa-gym.jpg](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/gen/spa-gym.jpg) | `spa-gym.jpg` |
+
+**pool.jpg — бассейн**
+```
+Indoor hotel swimming pool seen from the side along its length: calm turquoise water with soft reflections, chrome handrails and the pool edge in the right half of the frame, wooden wall panels and soft ceiling spotlights. On the left — a calm stretch of light wall and panels without details. Early morning, fresh and serene, inviting water.
+```
+
+**spa-sauna.jpg — сауна**
+```
+Finnish sauna in a hotel spa: open glass door to the sauna cabin with light wooden benches, a wooden bucket with a ladle and a rolled white towel, warm LED strip light along the benches, placed in the right half of the frame. On the left — the spa corridor wall with dark wood panels and soft warm glow, calm and empty. Cozy, warm, relaxing evening mood, soft golden light, not too orange.
+```
+
+**spa-gym.jpg — тренажёрный зал**
+```
+Hotel fitness room: treadmills and an elliptical trainer in a row, dumbbell rack and a stack of rolled white towels, mirror wall, placed in the right half of the frame. On the left — calm light wall and floor, no equipment. Bright soft daylight-like ceiling light, clean, airy and premium, warm beige tones.
 ```

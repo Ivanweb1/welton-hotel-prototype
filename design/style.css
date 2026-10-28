@@ -1649,3 +1649,5 @@ html, body { overflow-x: clip; }
   .offers__info--h .offers__tip { left: 50%; width: 220px; margin-left: -110px; }
   .offers__info--h .offers__tip::after { left: 50%; margin-left: -5px; }
 }
+/* галерея спа: на узких экранах держим объект (правую часть кадра) в кадре */
+@media (max-width: 1080px) { .tonus__media .slide { object-position: 72% center; } }
