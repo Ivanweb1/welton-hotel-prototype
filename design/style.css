@@ -1581,3 +1581,10 @@ html, body { overflow-x: clip; }
 @media (min-width: 1081px) {
   .sec__head:not(.sec__head--center) { grid-template-columns: 1fr 1fr; column-gap: 20px; }
 }
+
+/* быстрые ссылки: описание в одну строку */
+.pane { padding: 16px; gap: 12px; }
+.pane__art, .pane:hover .pane__art { width: 44px; height: 44px; }
+.pane__art svg { width: 22px; height: 22px; }
+.pane__text span { font-size: 12.5px; white-space: nowrap !important; }
+@media (max-width: 1340px) { .pane__text span { white-space: normal !important; } }
