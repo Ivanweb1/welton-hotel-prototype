@@ -188,7 +188,7 @@ dark, gloomy, cold blue cast, neon, harsh flash, HDR look, oversaturated orange,
 
 | Кадр | Референс | Сохранить как |
 |---|---|---|
-| Бассейн | [spa-pool.webp](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/spa-pool.webp) | `pool.jpg` |
+| Бассейн | [gen/pool.jpg](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/gen/pool.jpg) (исходник spa-pool.webp слишком маленький, 446×144) | `pool.jpg` |
 | Сауна | [gen/spa-sauna.jpg](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/gen/spa-sauna.jpg) | `spa-sauna.jpg` |
 | Тренажёрный зал | [gen/spa-gym.jpg](https://ivanweb1.github.io/welton-hotel-prototype/assets/photos/gen/spa-gym.jpg) | `spa-gym.jpg` |
 

@@ -1668,3 +1668,10 @@ html, body { overflow-x: clip; }
 .tonus__text .list li:has(.ico) b { display: block; margin-bottom: 3px; font-size: 15px; font-weight: 600; color: var(--teal-dark); white-space: normal; }
 .tonus__text .list li:has(.ico) span:not(.ico) { display: block; font-size: 13px; line-height: 1.45; }
 @media (max-width: 720px) { .tonus__text .list { grid-template-columns: 1fr 1fr; gap: 16px 18px; } }
+
+/* мероприятия: пометки поверх фото сверху — как у номеров */
+.event__img { position: relative; overflow: hidden; border-radius: var(--r-card); }
+.event__img img { display: block; }
+.event__img .specs { position: absolute; left: 14px; right: 14px; top: 14px; z-index: 1; }
+.event__img .specs li { padding: 5px 12px; background: rgba(249, 246, 240, .92); backdrop-filter: blur(6px); color: var(--teal-dark); font-size: 12.5px; }
+.event { overflow: visible; }
