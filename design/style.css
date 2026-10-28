@@ -1704,3 +1704,8 @@ html, body { overflow-x: clip; }
 .tonus__text .list li:has(.ico) .ico svg { width: 18px; height: 18px; }
 .tonus__text .list li:has(.ico) b { margin-top: 1px; }
 .tonus__text .list li:has(.ico) .ico { background: rgba(39, 96, 101, .06) !important; color: var(--teal) !important; border-radius: 50% !important; }
+/* бассейн и спа: описания ровно в две строки */
+.tonus__text { width: 640px; }
+.tonus__text .list { column-gap: 20px; }
+.tonus__text .list li:has(.ico) span:not(.ico) { white-space: nowrap; }
+@media (max-width: 720px) { .tonus__text .list { grid-template-columns: 1fr; } }
