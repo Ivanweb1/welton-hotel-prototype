@@ -187,3 +187,42 @@ document.querySelectorAll('.gr__more').forEach(function (btn) {
   box.addEventListener('mouseleave', function () { box.classList.remove('is-active'); });
   document.addEventListener('pointerdown', function (e) { if (!box.contains(e.target)) box.classList.remove('is-active'); });
 })();
+
+/* карта на API Яндекса (без рекламы, своя метка с логотипом).
+   Включается, когда в data-ymaps-key у .contacts__map прописан ключ; без ключа остаётся обычный виджет. */
+(function () {
+  var box = document.querySelector('.contacts__map'); if (!box) return;
+  var key = (box.dataset.ymapsKey || '').trim(); if (!key) return;
+  var lon = parseFloat(box.dataset.lon), lat = parseFloat(box.dataset.lat);
+  var fr = box.querySelector('iframe');
+  var holder = document.createElement('div'); holder.className = 'contacts__ymap';
+  var s = document.createElement('script');
+  s.src = 'https://api-maps.yandex.ru/2.1/?apikey=' + encodeURIComponent(key) + '&lang=ru_RU';
+  s.onload = function () {
+    ymaps.ready(function () {
+      if (fr) fr.remove();
+      box.insertBefore(holder, box.firstChild);
+      var map = new ymaps.Map(holder, { center: [lat, lon], zoom: 16, controls: ['zoomControl'] }, { suppressMapOpenBlock: true });
+      map.behaviors.disable('scrollZoom');
+      var Layout = ymaps.templateLayoutFactory.createClass(
+        '<div class="ymark"><span class="ymark__logo"><img src="../assets/icons/emblem-light.svg" alt=""></span><b>ВЭЛТОН</b></div>'
+      );
+      map.geoObjects.add(new ymaps.Placemark([lat, lon], { hintContent: 'ВЭЛТОН — отель и апартаменты' }, {
+        iconLayout: Layout,
+        iconShape: { type: 'Rectangle', coordinates: [[-62, -58], [62, 0]] }
+      }));
+      // метка правее центра на широком экране — плашка с текстом слева
+      function shift() {
+        var w = window.innerWidth;
+        var px = w > 1080 ? Math.min(w * 0.22, 360) : 0;
+        var pos = map.options.get('projection').toGlobalPixels([lat, lon], map.getZoom());
+        map.setGlobalPixelCenter([pos[0] - px, pos[1] - 24]);
+      }
+      shift(); window.addEventListener('resize', function () { map.container.fitToViewport(); shift(); });
+      // серая подложка, цветная — при взаимодействии; метка всегда цветная
+      var ground = map.panes.get('ground').getElement();
+      ground.classList.add('ymap-ground');
+    });
+  };
+  document.head.appendChild(s);
+})();
