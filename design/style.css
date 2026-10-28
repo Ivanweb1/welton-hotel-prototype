@@ -1640,3 +1640,12 @@ html, body { overflow-x: clip; }
 .tonus__text .list li:has(.ico) .ico svg { width: 18px; height: 18px; stroke-width: 1.6; }
 .tonus__text .list li:has(.ico) b { font-size: 15px; line-height: 1.3; white-space: nowrap; }
 .tonus__text .list li:has(.ico) span:not(.ico) { font-size: 13px; line-height: 1.35; color: var(--muted); }
+
+/* спецпредложения: «i» у заголовка, подсказка раскрывается вправо */
+.offers__info--h { width: 30px; height: 30px; margin-left: 4px; vertical-align: middle; position: relative; top: -4px; }
+.offers__info--h .offers__tip { right: auto; left: -6px; font-family: var(--font); font-weight: 400; letter-spacing: 0; }
+.offers__info--h .offers__tip::after { right: auto; left: 16px; }
+@media (max-width: 720px) {
+  .offers__info--h .offers__tip { left: 50%; width: 220px; margin-left: -110px; }
+  .offers__info--h .offers__tip::after { left: 50%; margin-left: -5px; }
+}
