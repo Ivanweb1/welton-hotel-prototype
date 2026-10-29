@@ -2283,3 +2283,63 @@ a:hover > .soc-ic .soc-ic__line, a:focus-visible > .soc-ic .soc-ic__line { strok
 
 /* Временно: на странице только первый экран. Чтобы вернуть блоки — удалить это правило */
 main > section:not(.hero), .ftr { display: none; }
+
+/* =================================================================
+   ЦВЕТОВЫЕ ВЕРСИИ ПЕРВОГО ЭКРАНА: ?theme=teal | ?theme=ink
+   Сочетания из брендбука (с. 10): Porcelain Light + Deep Teal, Porcelain + Ink.
+   ================================================================= */
+.th-teal {
+  --th-bg: rgba(15, 80, 85, .9);          /* Teal Dark */
+  --th-bg-solid: #0F5055;
+  --th-fg: var(--porcelain-light);
+  --th-muted: rgba(247, 244, 235, .64);
+  --th-line: rgba(247, 244, 235, .18);
+  --th-soft: rgba(247, 244, 235, .1);
+  --th-btn: var(--porcelain-light);
+  --th-btn-fg: var(--teal-dark);
+  --th-btn-hover: var(--porcelain);
+  --th-acc: #F5D8C2;                      /* Apricot Light */
+  --th-shade: rgba(15, 80, 85, .45);
+}
+.th-ink {
+  --th-bg: rgba(27, 28, 27, .9);          /* Ink */
+  --th-bg-solid: #1B1C1B;
+  --th-fg: var(--porcelain);
+  --th-muted: rgba(241, 235, 221, .6);
+  --th-line: rgba(241, 235, 221, .16);
+  --th-soft: rgba(241, 235, 221, .08);
+  --th-btn: var(--apricot);
+  --th-btn-fg: var(--ink);
+  --th-btn-hover: #F5D8C2;
+  --th-acc: var(--apricot);
+  --th-shade: rgba(27, 28, 27, .5);
+}
+
+:is(.th-teal, .th-ink) .hdr__in { background: var(--th-bg); color: var(--th-fg); box-shadow: 0 10px 30px -18px rgba(0, 0, 0, .5); }
+:is(.th-teal, .th-ink) .hdr__nav > a:hover,
+:is(.th-teal, .th-ink) .hdr__drop:hover .hdr__drop-btn { color: var(--th-acc); }
+:is(.th-teal, .th-ink) .hdr__drop-btn svg { color: var(--th-acc); }
+:is(.th-teal, .th-ink) .hdr__call { color: var(--th-fg); }
+:is(.th-teal, .th-ink) .hdr__call:hover { background: var(--th-soft); }
+:is(.th-teal, .th-ink) .hdr__lang { background: var(--th-soft); color: var(--th-muted); }
+:is(.th-teal, .th-ink) .hdr__lang a:hover { color: var(--th-fg); }
+:is(.th-teal, .th-ink) .hdr__lang a.is-on { background: var(--th-fg); color: var(--th-bg-solid); box-shadow: none; }
+:is(.th-teal, .th-ink) .burger { background: var(--th-soft); }
+:is(.th-teal, .th-ink) .burger i { background: var(--th-fg); }
+:is(.th-teal, .th-ink) .hdr .btn,
+:is(.th-teal, .th-ink) .book__btn { background: var(--th-btn); color: var(--th-btn-fg); }
+:is(.th-teal, .th-ink) .hdr .btn:hover,
+:is(.th-teal, .th-ink) .book__btn:hover { background: var(--th-btn-hover); }
+
+:is(.th-teal, .th-ink) .hero__stage::after { background: linear-gradient(180deg, rgba(27, 28, 27, .12), rgba(27, 28, 27, 0) 30%, var(--th-shade)); }
+:is(.th-teal, .th-ink) .hero .book { background: var(--th-bg); color: var(--th-fg); }
+:is(.th-teal, .th-ink) .book__fld span { color: var(--th-muted); }
+:is(.th-teal, .th-ink) .book__fld input { color: var(--th-fg); }
+:is(.th-teal, .th-ink) .book__fld input::placeholder { color: var(--th-fg); opacity: .8; }
+:is(.th-teal, .th-ink) .book__fld:hover { background: var(--th-soft); }
+:is(.th-teal, .th-ink) .book__fld + .book__fld::before { background: var(--th-line); }
+:is(.th-teal, .th-ink) .book__tip { background: var(--th-fg); color: var(--th-bg-solid); }
+:is(.th-teal, .th-ink) .book__tip::after { border-top-color: var(--th-fg); }
+@media (max-width: 1080px) {
+  :is(.th-teal, .th-ink) .book__tip { background: none; color: var(--th-muted); }
+}

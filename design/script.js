@@ -132,6 +132,15 @@
   if (v) document.documentElement.classList.add('hv-' + v);
 })();
 
+// цветовая версия первого экрана: ?theme=teal|ink — на тёмной шапке светлый логотип
+(function () {
+  var t = (location.search.match(/theme=(teal|ink)/) || [])[1];
+  if (!t) return;
+  document.documentElement.classList.add('th-' + t);
+  var logo = document.querySelector('.hdr__logo img');
+  if (logo) logo.src = logo.getAttribute('src').replace('_primary', '_porcelain');
+})();
+
 /* пометки на фото мероприятий — в одну строку, лишнее сворачиваем в «+N» */
 (function () {
   function fit() {
