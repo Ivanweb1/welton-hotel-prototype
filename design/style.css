@@ -2280,3 +2280,6 @@ a:hover > .soc-ic .soc-ic__line, a:focus-visible > .soc-ic .soc-ic__line { strok
 @media (max-width: 1080px) { .stay__img .slider__dots { right: 16px; bottom: 72px; } .stay__img.slider .slide { object-position: center !important; } }
 @media (max-width: 720px) { .stay__img .slider__dots { bottom: 52px; } }
 @media (max-width: 1080px) { .stay__img.slider .slide[src*="21x9"] { object-position: 72% center !important; } }
+
+/* Временно: на странице только первый экран. Чтобы вернуть блоки — удалить это правило */
+main > section:not(.hero), .ftr { display: none; }
